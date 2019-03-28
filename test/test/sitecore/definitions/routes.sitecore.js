@@ -31,6 +31,9 @@ export default function addRoutesToManifest(manifest) {
         type: CommonFieldTypes.SingleLineText,
       },
     ],
+    params: [
+      { name: "textTheme", displayName: 'Site Theme', type: 'droplist', source: '/sitecore/content/test/Content/ThemeFolder', standardValue: "dark" }
+    ],
     insertOptions: ['App Route'],
   });
 

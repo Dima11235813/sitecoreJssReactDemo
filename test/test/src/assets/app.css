@@ -8,3 +8,13 @@ a[target='_blank']:after {
   are set to edit mode.
 */
 .scChromeData, .scpm { display: none !important; }
+
+.darkTheme{
+  background-color: black !important; 
+  color: white !important;
+}
+
+.lightTheme{
+  background-color: rgb(200, 200, 200) !important;
+  color: black !important;  
+}

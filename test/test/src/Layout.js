@@ -20,8 +20,15 @@ import logo from './assets/sc_logo.png';
 
 // This is boilerplate navigation for sample purposes. Most apps should throw this away and use their own navigation implementation.
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
-let Navigation = ({ t, i18n }) => (
-  <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
+let Navigation = ({ t, i18n, theme }) => {
+  const navStyle = {
+    marginBottom: '0px !important'
+  }
+  const themeFromProps = theme ? theme : 'dark'
+  return (
+  <div 
+    className={`${themeFromProps} navbar navbar-default`}
+    style={navStyle}>
     <h5 className="my-0 mr-md-auto font-weight-normal">
       <NavLink to="/" className="text-dark">
         <img src={logo} alt="Sitecore" />
@@ -44,14 +51,28 @@ let Navigation = ({ t, i18n }) => (
       </NavLink>
     </nav>
   </div>
-);
+);}
 
 // inject dictionary props (`t`) into navigation so we can translate it
 // NOTE: using this is needed instead of using i18next directly to keep
 // the component state updated when i18n state (e.g. current language) changes
 Navigation = withNamespaces()(Navigation);
 
-const Layout = ({ route }) => (
+const Layout = ({ route }) => {
+  const themeColor = route.params && route.params.textTheme ? route.params.textTheme : "dark"
+  const containerStyle = {
+    minHeight: '100vh'
+  }
+  let containerClassStyle
+  switch(themeColor){
+    case "dark":
+      containerClassStyle = "darkTheme"
+      break
+    case "light":
+      containerClassStyle = "lightTheme"
+      break
+  }
+  return(
   <React.Fragment>
     {/* react-helmet enables setting <head> contents, like title and OG meta tags */}
     <Helmet>
@@ -69,13 +90,13 @@ const Layout = ({ route }) => (
     */}
     <VisitorIdentification />
 
-    <Navigation />
+    <Navigation theme={containerClassStyle}/>
 
     {/* root placeholder for the app, which we add components to using route data */}
-    <div className="container">
+    <div className={`container-fluid ${containerClassStyle}`} style={containerStyle}>
       <Placeholder name="jss-main" rendering={route} />
     </div>
   </React.Fragment>
-);
+)};
 
 export default Layout;
