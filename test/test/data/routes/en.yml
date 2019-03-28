@@ -24,7 +24,7 @@ placeholders:
   jss-main:
   - componentName: Dashboard
     fields:
-      heading: "Welcome to Generic Inc's Training Center"
+      heading: "Generic Inc's Training Center"
       heading2: "Where it Pays to Learn"
     placeholders:
       news:

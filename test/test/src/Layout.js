@@ -25,29 +25,31 @@ let Navigation = ({ t, i18n, theme }) => {
     marginBottom: '0px !important'
   }
   const themeFromProps = theme ? theme : 'dark'
+  const navClass = theme === "dark" ? "darkNavClass" : "lighNavClass"
   return (
   <div 
     className={`${themeFromProps} navbar navbar-default`}
     style={navStyle}>
-    <h5 className="my-0 mr-md-auto font-weight-normal">
+    <h5 className="">
       <NavLink to="/" className="text-dark">
-        <img src={logo} alt="Sitecore" />
+        <img src={logo} alt="SiteCore" style={{maxHeight: "84px"}}/>
+        <span style={{marginLeft: '1em'}}>
+          Generic Inc Proudly Presents
+        </span>
       </NavLink>
     </h5>
-    <nav className="my-2 my-md-0 mr-md-3">
-      <a
-        className="p-2 text-dark"
-        href="https://jss.sitecore.net"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t('Documentation')}
-      </a>
-      <NavLink to="/styleguide" className="p-2 text-dark">
-        {t('Styleguide')}
+    <nav className={navClass}>
+      <NavLink to="/">
+        {t('About')}
       </NavLink>
-      <NavLink to="/graphql" className="p-2 text-dark">
-        {t('GraphQL')}
+      <NavLink to="/">
+        {t('Blog')}
+      </NavLink>
+      <NavLink to="/">
+        {t('News')}
+      </NavLink>
+      <NavLink to="/">
+        {t('Contact Us')}
       </NavLink>
     </nav>
   </div>
@@ -94,7 +96,9 @@ const Layout = ({ route }) => {
 
     {/* root placeholder for the app, which we add components to using route data */}
     <div className={`container-fluid ${containerClassStyle}`} style={containerStyle}>
-      <Placeholder name="jss-main" rendering={route} />
+      <div className="containter">
+        <Placeholder name="jss-main" rendering={route} />
+      </div>
     </div>
   </React.Fragment>
 )};

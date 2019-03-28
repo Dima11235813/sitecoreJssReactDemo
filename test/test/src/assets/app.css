@@ -18,3 +18,26 @@ a[target='_blank']:after {
   background-color: rgb(200, 200, 200) !important;
   color: black !important;  
 }
+
+.darkNavClass a{
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.darkNavClass a:hover{
+  color: orange;
+}
+.darkNavClass a:active{
+  color: red;
+}
+.lighNavClass a{
+  color: black;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.lighNavClass a:hover{
+  color: blue;
+}
+.lighNavClass a:active{
+  color: purple;
+}
