@@ -1,0 +1,8 @@
+fields:
+  pageTitle: About
+placeholders:
+  jss-main:
+  - componentName: Dashboard
+    fields:
+      heading: "Generic Inc's Training Center"
+      heading2: "Don't Call Us, We'll Call You"

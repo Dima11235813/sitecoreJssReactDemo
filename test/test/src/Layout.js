@@ -3,6 +3,7 @@ import { Placeholder, VisitorIdentification } from '@sitecore-jss/sitecore-jss-r
 import { NavLink } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import Helmet from 'react-helmet';
+import Footer from './Footer'
 
 // Using bootstrap is completely optional. It's used here to provide a clean layout for samples,
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
@@ -22,13 +23,19 @@ import logo from './assets/sc_logo.png';
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
 let Navigation = ({ t, i18n, theme }) => {
   const navStyle = {
-    marginBottom: '0px !important'
+    marginBottom: '0px !important',
+    position: "relative",
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "space-between"
   }
   const themeFromProps = theme ? theme : 'dark'
-  const navClass = theme === "dark" ? "darkNavClass" : "lighNavClass"
+  const navClass = themeFromProps === "darkTheme" ? "darkNavClass" : "lightNavClass"
+  // debugger
   return (
-  <div 
-    className={`${themeFromProps} navbar navbar-default`}
+  <header 
+    className={`${themeFromProps} navbar-default`}
     style={navStyle}>
     <h5 className="">
       <NavLink to="/" className="text-dark">
@@ -39,31 +46,32 @@ let Navigation = ({ t, i18n, theme }) => {
       </NavLink>
     </h5>
     <nav className={navClass}>
-      <NavLink to="/">
+      <NavLink to="/About">
         {t('About')}
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/Blog">
         {t('Blog')}
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/News">
         {t('News')}
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/Contact">
         {t('Contact Us')}
       </NavLink>
     </nav>
-  </div>
+  </header>
 );}
 
 // inject dictionary props (`t`) into navigation so we can translate it
 // NOTE: using this is needed instead of using i18next directly to keep
 // the component state updated when i18n state (e.g. current language) changes
 Navigation = withNamespaces()(Navigation);
+let LayoutFooter = withNamespaces()(Footer);
 
 const Layout = ({ route }) => {
   const themeColor = route.params && route.params.textTheme ? route.params.textTheme : "dark"
   const containerStyle = {
-    minHeight: '100vh'
+    minHeight: 'calc(100vh - 200px)'
   }
   let containerClassStyle
   switch(themeColor){
@@ -100,6 +108,8 @@ const Layout = ({ route }) => {
         <Placeholder name="jss-main" rendering={route} />
       </div>
     </div>
+
+    <LayoutFooter/>
   </React.Fragment>
 )};
 

@@ -1,0 +1,10 @@
+fields:
+  pageTitle: About
+params:
+  textTheme: "dark"
+placeholders:
+  jss-main:
+  - componentName: Dashboard
+    fields:
+      heading: "Generic Inc's Training Center"
+      heading2: "We Write Code and We Know Things"

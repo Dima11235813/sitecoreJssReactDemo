@@ -27,17 +27,22 @@ a[target='_blank']:after {
 .darkNavClass a:hover{
   color: orange;
 }
-.darkNavClass a:active{
+.darkNavClass a.active{
   color: red;
 }
-.lighNavClass a{
+.lightNavClass a{
   color: black;
   padding: 1rem;
   font-size: 2rem;
 }
-.lighNavClass a:hover{
+.lightNavClass a:hover{
   color: blue;
 }
-.lighNavClass a:active{
+.lightNavClass a.active{
   color: purple;
+}
+
+.footer a{
+  text-decoration: none;
+  font-size: 1rem;
 }
