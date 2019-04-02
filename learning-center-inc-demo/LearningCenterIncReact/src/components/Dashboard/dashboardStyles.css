@@ -4,3 +4,8 @@ h1{
 h2{
     text-align: center;
 }
+
+.DashBoardContentContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

@@ -21,7 +21,7 @@ const Footer = ({t, i18n, theme}) => {
       break
     default:
       containerStyle = {
-        background: 'black',
+        background: '#999999',
         color: 'white',
         height: '100px'
       }

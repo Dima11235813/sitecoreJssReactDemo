@@ -1,3 +1,5 @@
+#Images from https://www.pexels.com/search/technology/
+
 # This is a route layout definition.
 # The route definition defines which Sitecore components are present on a route,
 # what their content data is, and which _placeholder_ they are placed in.
@@ -27,9 +29,59 @@ placeholders:
       heading: "Generic Inc's Training Center"
       heading2: "Where it Pays to Learn"
     placeholders:
-      news:
-        - componentName: Announcement
       dashboard:
-        - componentName: LearningResourceCard
-      
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 1"
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 2"
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 3"
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 4"
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 5"
+        - componentName: LearningCard
+          fields:
+            heading: "Generic Inc's Training Center"
+            link:
+              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              text: React Native Crash Course 
+            image:
+              src: /assets/learningCardImages/cardImage1.jpg
+              alt: "Card Image 6"
     
