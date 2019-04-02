@@ -1,6 +1,7 @@
 .learning-card-container{
     background-color: black;
-    height: 600px;
+    height: 650px;
+    position: relative;
 }
 .learning-card-text{
     font-size: 2.5rem;
@@ -38,6 +39,23 @@
     margin-right: 30px;
     float: right;
 }
+.learning-card-author-container{
+    bottom: 0px;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0px 0px 1rem 30px;
+    position: absolute;
+
+}
+.learning-card-author-container a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+.learning-card-author:hover{
+    color: red;
+    text-decoration: none;
+}
 
 /* ON HOVER STYLES */
 .learning-card-container:hover{
@@ -62,4 +80,15 @@
 }
 .learning-card-container:hover .learning-card-category-tag{
     margin-right: 1rem;
+}
+.learning-card-container:hover .learning-card-author-container{
+    color: orange;
+    padding-left: 1rem;
+}
+.learning-card-container:hover .learning-card-author{
+    color: orange;
+}
+.learning-card-author:hover{
+    font-size: 2rem;
+    text-decoration: none;
 }

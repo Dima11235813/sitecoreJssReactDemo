@@ -34,7 +34,7 @@ let Navigation = ({ t, i18n, theme }) => {
   }
   const themeFromProps = theme ? theme : 'dark'
   const navClass = themeFromProps === "darkTheme" ? "darkNavClass" : "lightNavClass"
-  // debugger
+  const colorForNavigationTitle = themeFromProps === "darkTheme" ? 'darkTitleStyles' : 'lightTitleStyles'
   return (
   <header 
     className={`${themeFromProps} navbar-default`}
@@ -42,7 +42,7 @@ let Navigation = ({ t, i18n, theme }) => {
     <h5 className="">
       <NavLink to="/" className="text-dark">
         <img src={logo} alt="SiteCore" style={{maxHeight: "84px"}}/>
-        <span style={{marginLeft: '1em'}}>
+        <span className={`site-header-title ${colorForNavigationTitle}`} style={{marginLeft: '1em'}}>
           Generic Inc Proudly Presents
         </span>
       </NavLink>
@@ -73,7 +73,7 @@ let LayoutFooter = withNamespaces()(Footer);
 const Layout = ({ route }) => {
   const themeColor = route.params && route.params.textTheme ? route.params.textTheme : "dark"
   const containerStyle = {
-    minHeight: 'calc(100vh - 200px)'
+    minHeight: 'calc(100vh - 192px)'
   }
   let containerClassStyle
   switch(themeColor){

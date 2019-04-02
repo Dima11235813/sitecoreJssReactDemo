@@ -4,6 +4,9 @@ import { Text, Placeholder } from '@sitecore-jss/sitecore-jss-react';
 import './dashboardStyles.css'
 
 const Dashboard = (props) => {
+if(!props.fields){
+  return null
+}
 // debugger //if you set a break point here you can see child renderings
 return(
 <section>

@@ -1,0 +1,14 @@
+fields:
+  pageTitle: RyanKuchler
+placeholders:
+  jss-main:
+  - componentName: AuthorProfile
+    fields:
+      authorName: Ryan Kuchler
+      authorImage: 
+        src: /assets/authorImages/ryan.jpg
+        alt: "Ryan Kuchler"
+      authorDetails: "Ipsum Doleer"
+    params:
+      headingColor: c8c8c8
+      headerColor: 0066cc

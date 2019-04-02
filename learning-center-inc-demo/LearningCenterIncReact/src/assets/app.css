@@ -12,7 +12,12 @@ a[target='_blank']:after {
   are set to edit mode.
 */
 .scChromeData, .scpm { display: none !important; }
-
+.darkTitleStyles{
+  color: white;
+}
+.lightTitleStyles{
+  color: black;
+}
 .darkTheme{
   background-color: black !important; 
   color: white !important;
@@ -21,6 +26,9 @@ a[target='_blank']:after {
 .lightTheme{
   background-color: rgb(200, 200, 200) !important;
   color: black !important;  
+}
+.lightThemeFooter{
+  background-color: #939393;
 }
 
 .darkNavClass a{
@@ -33,6 +41,13 @@ a[target='_blank']:after {
 }
 .darkNavClass a.active{
   color: red;
+}
+.lightNavClass span{
+  color: white;
+}
+.lightNavClass span:hover{
+  color: orange;
+  text-decoration: none;
 }
 .lightNavClass a{
   color: black;

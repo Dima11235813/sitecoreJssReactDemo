@@ -1,10 +1,8 @@
 fields:
-  pageTitle: About
-params:
-  textTheme: "dark"
+  pageTitle: Careers
 placeholders:
   jss-main:
   - componentName: Dashboard
     fields:
       heading: "Generic Inc's Training Center"
-      heading2: "We help you become better, faster, and smarter."
+      heading2: "Don't Call Us, We'll Call You"

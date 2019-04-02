@@ -19,7 +19,7 @@ export default function(manifest) {
     params: [
       { name: "difficultyTag", displayName: 'Learning Card Difficulty Tag', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/DifficultyTagsFolder' },
       { name: "learningCategoryTag", displayName: 'Learning Category Tag', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/LearningCategoriesFolder' },
-      { name: "author", displayName: 'Autho Tag', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/LearningCategoriesFolder' }
+      { name: "author", displayName: 'Author Tag', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/AuthorFolder' }
     ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

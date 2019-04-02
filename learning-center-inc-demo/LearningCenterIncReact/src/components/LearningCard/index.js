@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, Link, Image } from '@sitecore-jss/sitecore-jss-react';
+import {Link } from 'react-router-dom'
+import { Text, Link as JssLink, Image } from '@sitecore-jss/sitecore-jss-react';
 
 import './learningCardStyles.css'
 
@@ -8,7 +9,14 @@ const LearningCard = (props) => {
 const {heading, link, image} = props.fields
 
 const params = props.params ? props.params : null
-const {difficultyTag, learningCategoryTag, theme} = params
+const {difficultyTag, learningCategoryTag, author ,theme} = params
+
+let authorUrl = '/'
+let authorNameForDisplay = ''
+if(author){
+  authorUrl = author.split('-').join('')
+  authorNameForDisplay = author.split('-').join(' ')
+}
 
 //set up styles for difficulty tag
 let difficultyTagClass = ""
@@ -23,7 +31,7 @@ if(difficultyTag){
 
 return(
   <div className="learning-card-container">
-    <Link field={link}>
+    <JssLink field={link}>
       <div className="learning-card-text">
         <Text field={heading} />
       </div>
@@ -39,7 +47,18 @@ return(
       <div className="learning-card-image">
         <Image media={image} />
       </div>
-    </Link>
+      {/* If no author is set then don't display this section */}
+      {authorNameForDisplay === '' ? null :
+      <div className="learning-card-author-container">
+        {`By `}
+      <Link to={`/authors/${authorUrl}`}>
+        <span className="learning-card-author">
+          {authorNameForDisplay}
+        </span>
+      </Link>
+      </div>
+      }
+    </JssLink>
   </div>
 )
 }

@@ -9,9 +9,9 @@ const AuthorProfile = (props) => {
   //use params to style the author page
   const params = props.params ? props.params : null
   const {headingColor, headerColor}  = params
-  const sectionStyles = {backgroundColor: `#${headingColor}`}
-  const authorNameStyles = {color: `#${headerColor}`}
-debugger
+  const sectionStyles = {backgroundColor: `#${headerColor}`}
+  const authorNameStyles = {color: `#${headingColor}`}
+
   return(
 <section className="row" style={sectionStyles}>
   <div className="col-md-12">
@@ -20,10 +20,10 @@ debugger
         <Text field={authorName}></Text>
       </div>
       <div className="author-profile-image">
-        <Image field={authorImage}></Image>
+        <Image media={authorImage}></Image>
       </div>
       <div className="author-profile-details">
-        <RichText field={authorDetails} />
+        <RichText field={authorDetails} style={authorNameStyles}/>
       </div>
     </div>
   </div>

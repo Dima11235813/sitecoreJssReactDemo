@@ -1,0 +1,14 @@
+fields:
+  pageTitle: WillRolloff
+placeholders:
+  jss-main:
+  - componentName: AuthorProfile
+    fields:
+      authorName: Will Rolloff
+      authorImage: 
+        src: /assets/authorImages/will.jpg
+        alt: "Will Rolloff"
+      authorDetails: "Ipsum placeholder text"
+    params:
+      headingColor: c8c8c8
+      headerColor: 0066cc
