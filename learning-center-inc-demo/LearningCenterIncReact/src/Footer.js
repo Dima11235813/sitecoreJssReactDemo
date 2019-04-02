@@ -31,12 +31,12 @@ const Footer = ({t, i18n, theme}) => {
     <footer className={`footer container-fluid`} style={containerStyle}>
       <div className="containter">
         <div className="row">
-          <div className={`col-md-12 ${navClassToUse}`} style={{padding: "20px", margin: 'auto'}}>
+          <div className={`col-md-12 ${navClassToUse} text-center`} style={{padding: "20px", margin: 'auto', fontSize: '2rem'}}>
             <Link to="/">Home</Link>
-            <Link to="/Contact">Contact Us</Link>
-            <Link to="/Careers">Careers</Link>
             <Link to="/About">About</Link>
             <Link to="/Blog">Blog</Link>
+            <Link to="/Careers">Careers</Link>
+            <Link to="/Contact">Contact Us</Link>
           </div>
         </div>
       </div>
