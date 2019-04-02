@@ -1,4 +1,4 @@
-id: ninja
-name: ninja
-displayName: Ninja Difficulty Tag
+id: intermediate
+name: intermediate
+displayName: Intermediate Difficulty Tag
 template: DifficultyTagsItem

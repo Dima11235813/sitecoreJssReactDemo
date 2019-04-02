@@ -29,59 +29,77 @@ placeholders:
       heading: "Generic Inc's Training Center"
       heading2: "Where it Pays to Learn"
     placeholders:
-      dashboard:
+      dashboard-content:
         - componentName: LearningCard
+          params:
+            difficultyTag: beginner
+            learningCategoryTag: css
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Learn CSS - Cascading Style Sheets"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
-              text: React Native Crash Course 
+              href: https://www.youtube.com/watch?v=yfoY53QXEnI
+              text: Learn CSS - Cascading Style Sheets 
             image:
               src: /assets/learningCardImages/cardImage1.jpg
-              alt: "Card Image 1"
+              alt: "Learn CSS - Cascading Style Sheets"
         - componentName: LearningCard
+          params:
+              difficultyTag: intermediate
+              learningCategoryTag: html
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Implement Accessibility with HTML5"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
-              text: React Native Crash Course 
+              href: https://www.youtube.com/watch?v=x18vEEfpK3g
+              text: Implement Accessibility with HTML5 
             image:
-              src: /assets/learningCardImages/cardImage1.jpg
+              src: /assets/learningCardImages/cardImage2.jpg
               alt: "Card Image 2"
         - componentName: LearningCard
+          params:
+            difficultyTag: advanced
+            learningCategoryTag: react
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Using React's Context API"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
-              text: React Native Crash Course 
+              href: https://www.youtube.com/watch?v=XLJN4JfniH4&t=625s
+              text: Using React's Context API 
             image:
-              src: /assets/learningCardImages/cardImage1.jpg
+              src: /assets/learningCardImages/cardImage3.jpg
               alt: "Card Image 3"
         - componentName: LearningCard
+          params:
+            difficultyTag: ninja
+            learningCategoryTag: redis
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Cache Invalidation with Redis"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
-              text: React Native Crash Course 
+              href: https://www.youtube.com/watch?v=DUbEgNw-F9c
+              text: Cache Invalidation with Redis
             image:
-              src: /assets/learningCardImages/cardImage1.jpg
+              src: /assets/learningCardImages/cardImage4.jpg
               alt: "Card Image 4"
         - componentName: LearningCard
+          params:
+            difficultyTag: advanced
+            learningCategoryTag: react
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Refactor an AngularJS app into a React App"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
-              text: React Native Crash Course 
+              href: https://www.youtube.com/watch?v=upblAHwS-R8
+              text: Refactor an AngularJS app into a React App 
             image:
-              src: /assets/learningCardImages/cardImage1.jpg
+              src: /assets/learningCardImages/cardImage5.jpg
               alt: "Card Image 5"
         - componentName: LearningCard
+          params:
+            difficultyTag: ninja
+            learningCategoryTag: api
           fields:
-            heading: "Generic Inc's Training Center"
+            heading: "Create a GraphQL API in .NET CORE"
             link:
-              href: https://www.youtube.com/watch?v=mkualZPRZCs
+              href: https://www.youtube.com/watch?v=8brpq7DdFIs
               text: React Native Crash Course 
             image:
-              src: /assets/learningCardImages/cardImage1.jpg
+              src: /assets/learningCardImages/cardImage6.jpg
               alt: "Card Image 6"
     

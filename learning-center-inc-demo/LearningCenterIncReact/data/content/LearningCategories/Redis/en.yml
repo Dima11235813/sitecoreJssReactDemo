@@ -1,0 +1,4 @@
+id: redis
+name: redis
+displayName: Redis Learning Category
+template: LearningCategoriesItem

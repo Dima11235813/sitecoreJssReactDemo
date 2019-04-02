@@ -10,11 +10,16 @@ export default function(manifest) {
   manifest.addComponent({
     name: 'LearningCard',
     icon: SitecoreIcon.DocumentTag,
+    allowedPlaceholders: ['dashboard-content'],
     fields: [
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
       { name: 'link', type: CommonFieldTypes.GeneralLink },
       { name: 'image', type: CommonFieldTypes.Image },
     ],
+    params: [
+      { name: "difficultyTag", displayName: 'Learning Card Difficulty Tag', type: 'droplist', source: '/sitecore/content/ppmamerica/Content/DifficultyTagsFolder' },
+      { name: "learningCategoryTag", displayName: 'Learning Category Tag', type: 'droplist', source: '/sitecore/content/ppmamerica/Content/LearningCategoriesFolder' }
+    ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
     register it here, or components added to that placeholder will not be returned by Sitecore:

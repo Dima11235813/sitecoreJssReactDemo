@@ -28,7 +28,9 @@ let Navigation = ({ t, i18n, theme }) => {
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    paddingLeft: "15px",
+    paddingRight: "15px"
   }
   const themeFromProps = theme ? theme : 'dark'
   const navClass = themeFromProps === "darkTheme" ? "darkNavClass" : "lightNavClass"
