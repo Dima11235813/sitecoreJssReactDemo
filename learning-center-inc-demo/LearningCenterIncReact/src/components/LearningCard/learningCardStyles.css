@@ -87,8 +87,14 @@
 }
 .learning-card-container:hover .learning-card-author{
     color: orange;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+.learning-card-author:hover a{
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-color: red;
 }
 .learning-card-author:hover{
     font-size: 2rem;
-    text-decoration: none;
 }

@@ -8,7 +8,7 @@ placeholders:
       authorImage: 
         src: /assets/authorImages/ryan.jpg
         alt: "Ryan Kuchler"
-      authorDetails: "Ipsum Doleer"
+      authorDetails: "Lead Architect at Productive Edge and SiteCore Expert"
     params:
       headingColor: c8c8c8
       headerColor: 0066cc

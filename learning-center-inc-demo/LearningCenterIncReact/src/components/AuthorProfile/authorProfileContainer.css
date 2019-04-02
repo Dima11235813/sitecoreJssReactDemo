@@ -1,14 +1,19 @@
 .author-profile-container{
-    min-height: 30vh;
+    min-height: 10vh;
 }
 .author-profile-name{
     font-size: 4rem;
     text-align: center;
 }
 .author-profile-image{
+    padding: 1rem;
+    align-content: center;
+    display: flex;
+}
+.author-profile-image img{
     min-height: 400px;
+    height: 10vh;
     margin: auto;
-    padding: 3rem;
 }
 .author-profile-details{
     font-size: 2rem;

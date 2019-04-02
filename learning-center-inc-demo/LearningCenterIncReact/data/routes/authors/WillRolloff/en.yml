@@ -8,7 +8,7 @@ placeholders:
       authorImage: 
         src: /assets/authorImages/will.jpg
         alt: "Will Rolloff"
-      authorDetails: "Ipsum placeholder text"
+      authorDetails: "Will Rolloff is a technical leader, architect and software development professional with over 15 years of experience. He leads a global team of consultants across all functional disciplines to deliver custom enterprise solutions."
     params:
       headingColor: c8c8c8
       headerColor: 0066cc
