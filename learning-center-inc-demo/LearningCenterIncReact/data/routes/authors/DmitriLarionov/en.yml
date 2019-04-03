@@ -1,5 +1,7 @@
 fields:
   pageTitle: DmitriLarionov
+params:
+  textTheme: "light"
 placeholders:
   jss-main:
   - componentName: AuthorProfile

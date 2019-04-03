@@ -1,4 +1,4 @@
 fields:
   pageTitle: authors
 params:
-  textTheme: "dark"
+  textTheme: "light"

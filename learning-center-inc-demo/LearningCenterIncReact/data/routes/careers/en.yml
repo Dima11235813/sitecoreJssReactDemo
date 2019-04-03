@@ -1,5 +1,7 @@
 fields:
   pageTitle: Careers
+params:
+  textTheme: "light"
 placeholders:
   jss-main:
   - componentName: Dashboard

@@ -1,7 +1,7 @@
 fields:
   pageTitle: About
 params:
-  textTheme: "dark"
+  textTheme: "light"
 placeholders:
   jss-main:
   - componentName: Dashboard
