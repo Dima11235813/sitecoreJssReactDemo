@@ -1,4 +1,4 @@
-id: DifficultyTagsFolder
-name: DifficultyTagsFolder
+id: DifficultyTags
+name: DifficultyTags
 displayName: Difficulty Tags Folder
-template: DifficultyTagsFolder
+template: DifficultyTags

@@ -90,13 +90,8 @@
     text-decoration: underline;
     text-decoration-color: orange;
 }
-.learning-card-author:hover a{
-    /* font-size: 2rem; */
+.learning-card-author:hover{
     color: red;
     text-decoration: underline;
     text-decoration-color: red;
-}
-.learning-card-author a:hover{
-    /* font-size: 2rem; */
-    color: red;
 }

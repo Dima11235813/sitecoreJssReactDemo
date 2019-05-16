@@ -1,10 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); */
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Serif+Pro'); */
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
 *{
   transition: all .35s ease;
+  /* font-family: 'SourceCodePro' */
+  /* font-family: 'SourceSerifPro' */
+  font-family: 'ArchivoNarrow'
 }
 
-a[target='_blank']:after {
+/* This puts a little new window icon next to links that open in a new window, doesn't look great */
+/* a[target='_blank']:after {
   content: '\1F5D7'
-}
+} */
 
 /*
   Hides Sitecore Experience Editor markup,

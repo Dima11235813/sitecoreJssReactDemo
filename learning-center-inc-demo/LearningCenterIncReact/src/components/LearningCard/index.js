@@ -48,6 +48,7 @@ return(
         <Image media={image} />
       </div>
       {/* If no author is set then don't display this section */}
+      </JssLink>
       {authorNameForDisplay === '' ? null :
       <div className="learning-card-author-container">
         {`By `}
@@ -58,7 +59,6 @@ return(
       </Link>
       </div>
       }
-    </JssLink>
   </div>
 )
 }
