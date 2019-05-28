@@ -7,8 +7,8 @@ import { CommonFieldTypes, Manifest } from '@sitecore-jss/sitecore-jss-manifest'
  */
 export default function(manifest) {
   manifest.addTemplate({
-    name: 'LearningCategoriesItem',
-    displayName: 'Learning Categories Item',
-    icon: '/~/icon/applicationsv2/32x32/star_green.png',
+    name: 'DifficultyTags',
+    displayName: 'Difficulty Tag Option',
+    icon: '/~/icon/applicationsv2/32x32/star2_yellow.png'
   });
 }

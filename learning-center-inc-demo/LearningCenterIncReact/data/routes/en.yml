@@ -32,9 +32,9 @@ placeholders:
       dashboard-content:
         - componentName: LearningCard
           params:
-            difficultyTag: beginner
-            learningCategoryTag: css
-            author: Dmitri-Larionov
+            difficultyTag: "beginner"
+            learningCategoryTag: "css"
+            author: "Dmitri-Larionov"
           fields:
             heading: "Learn CSS - Cascading Style Sheets"
             link:
@@ -45,9 +45,9 @@ placeholders:
               alt: "Learn CSS - Cascading Style Sheets"
         - componentName: LearningCard
           params:
-              difficultyTag: intermediate
-              learningCategoryTag: html
-              author: Ryan-Kuchler
+              difficultyTag: "intermediate"
+              learningCategoryTag: "html"
+              author: "Ryan-Kuchler"
           fields:
             heading: "Accessibility with HTML5"
             link:
@@ -58,9 +58,9 @@ placeholders:
               alt: "Card Image 2"
         - componentName: LearningCard
           params:
-            difficultyTag: advanced
-            learningCategoryTag: react
-            author: Dmitri-Larionov
+            difficultyTag: "advanced"
+            learningCategoryTag: "react"
+            author: "Dmitri-Larionov"
           fields:
             heading: "Using React's Context API"
             link:
@@ -71,9 +71,9 @@ placeholders:
               alt: "Card Image 3"
         - componentName: LearningCard
           params:
-            difficultyTag: ninja
-            learningCategoryTag: redis
-            author: Will-Rolloff
+            difficultyTag: "ninja"
+            learningCategoryTag: "redis"
+            author: "Will-Rolloff"
           fields:
             heading: "Cache Invalidation with Redis"
             link:
@@ -84,9 +84,9 @@ placeholders:
               alt: "Card Image 4"
         - componentName: LearningCard
           params:
-            difficultyTag: advanced
-            learningCategoryTag: react
-            author: Will-Rolloff
+            difficultyTag: "advanced"
+            learningCategoryTag: "react"
+            author: "Will-Rolloff"
           fields:
             heading: "Refactor an AngularJS app into a React App"
             link:
@@ -97,9 +97,9 @@ placeholders:
               alt: "Card Image 5"
         - componentName: LearningCard
           params:
-            difficultyTag: ninja
-            learningCategoryTag: api
-            author: Ryan-Kuchler
+            difficultyTag: "ninja"
+            learningCategoryTag: "api"
+            author: "Ryan-Kuchler"
           fields:
             heading: "Create a GraphQL API in .NET CORE"
             link:
