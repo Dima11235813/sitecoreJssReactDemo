@@ -1,0 +1,11 @@
+#temp todo remove all this
+id: blog-grid
+name: Blog Grid
+componentName: DyanmicDisplayOfBlogArticles
+fields: 
+  defaultCardImage:
+    src: /assets/insights/insights-article.jpg
+    alt: "play icon"
+params: 
+  contentSource: "/sitecore/content/test/blog"
+  

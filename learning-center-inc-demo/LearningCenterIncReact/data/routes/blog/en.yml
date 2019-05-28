@@ -8,3 +8,4 @@ placeholders:
     fields:
       heading: "Generic Inc's Training Center"
       heading2: "We Write Code and We Know Things"
+  - componentName: DyanmicDisplayOfBlogArticles
