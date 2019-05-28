@@ -12,5 +12,5 @@ placeholders:
         alt: "Dmitri Larionov Loves the Mountains"
       authorDetails: Web developer with digital marketing skills, tech nerd, snowboarding/skiing bilingual musician who loves chess. </br> Passionately curious about almost everything.
     params:
-      headingColor: c8c8c8
-      headerColor: 0066cc
+      headingColor: "c8c8c8"
+      headerColor: "0066cc"

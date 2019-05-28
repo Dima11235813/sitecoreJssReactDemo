@@ -12,5 +12,5 @@ placeholders:
         alt: "Ryan Kuchler"
       authorDetails: "Lead Architect at Productive Edge and SiteCore Expert"
     params:
-      headingColor: c8c8c8
-      headerColor: 0066cc
+      headingColor: "c8c8c8"
+      headerColor: "0066cc"
