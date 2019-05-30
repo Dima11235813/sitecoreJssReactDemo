@@ -8,6 +8,8 @@ import Footer from './Footer'
 // Using bootstrap is completely optional. It's used here to provide a clean layout for samples,
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import 'jquery/dist/jquery.js';
 import './assets/app.css';
 import logo from './assets/sc_logo.png';
 
@@ -70,10 +72,12 @@ let Navigation = ({ t, i18n, theme }) => {
 Navigation = withNamespaces()(Navigation);
 let LayoutFooter = withNamespaces()(Footer);
 
-const Layout = ({ route }) => {
+const Layout = ({ sitecoreData }) => {
+  const { route, context } = sitecoreData
   const themeColor = route.params && route.params.textTheme ? route.params.textTheme : "dark"
   const containerStyle = {
-    minHeight: 'calc(100vh - 192px)'
+    minHeight: 'calc(100vh - 192px)',
+    maxWidth: '1200px'
   }
   let containerClassStyle
   switch(themeColor){
@@ -107,7 +111,7 @@ const Layout = ({ route }) => {
     {/* root placeholder for the app, which we add components to using route data */}
     <div className={`container-fluid ${containerClassStyle}`} style={containerStyle}>
       <div className="containter">
-        <Placeholder name="jss-main" rendering={route} />
+        <Placeholder name="jss-main" rendering={route} context={context} />
       </div>
     </div>
 

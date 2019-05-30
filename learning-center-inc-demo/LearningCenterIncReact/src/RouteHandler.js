@@ -22,6 +22,7 @@ export default class RouteHandler extends React.Component {
 
     this.state = {
       notFound: true,
+      loading: true, //added to pass loading state to components
       routeData: ssrInitialState, // null when client-side rendering
       defaultLanguage: config.defaultLanguage,
     };
@@ -104,7 +105,7 @@ export default class RouteHandler extends React.Component {
           itemId: routeData.sitecore.route.itemId,
           ...routeData.sitecore.context,
         });
-        this.setState({ routeData, notFound: false });
+        this.setState({ routeData, notFound: false, loading: false });
       } else {
         this.setState({ routeData, notFound: true });
       }
@@ -179,7 +180,8 @@ export default class RouteHandler extends React.Component {
     }
 
     // Render the app's root structural layout
-    return <Layout route={routeData.sitecore.route} />;
+    // return <Layout route={routeData.sitecore.route} />;//Original - change to
+    return <Layout sitecoreData={routeData.sitecore} loading={this.state.loading} />; //pass loading state and sitecore data for route data and context
   }
 }
 

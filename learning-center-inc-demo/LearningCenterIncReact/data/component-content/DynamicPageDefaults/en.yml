@@ -4,7 +4,7 @@ name: Blog Grid
 componentName: DyanmicDisplayOfBlogArticles
 fields: 
   defaultCardImage:
-    src: /assets/insights/insights-article.jpg
+    src: /assets/learningCardImages/cardImage1.jpg
     alt: "play icon"
 params: 
   contentSource: "/sitecore/content/test/blog"
