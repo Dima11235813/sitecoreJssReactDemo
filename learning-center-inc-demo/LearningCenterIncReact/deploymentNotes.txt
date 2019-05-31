@@ -1,0 +1,413 @@
+jss deploy app -c -d -w --unattendedWipe
+JSS is creating a manifest for test to ./sitecore/manifest...
+Cleaning path ./sitecore/manifest...
+Cleaned:
+ C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\authorImages
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\authorImages\dmitri.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\authorImages\ryan.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\authorImages\will.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImagesC:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage1.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage2.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage3.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage4.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage5.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\assets\learningCardImages\cardImage6.jpg
+C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\sitecore\manifest\sitecore-import.json
+Enabling Babel 7 transpilation for the manifest...
+path or pattern './sitecore/pipelines/**/*.patch.js' did not match any files.
+path or pattern './sitecore/pipelines/**/*.patch.ts' did not match any files.
+copied media from: ./assets/learningCardImages/cardImage1.jpg to: sitecore\manifest\assets\learningCardImages\cardImage1.jpg
+copied media from: ./assets/learningCardImages/cardImage2.jpg to: sitecore\manifest\assets\learningCardImages\cardImage2.jpg
+copied media from: ./assets/learningCardImages/cardImage3.jpg to: sitecore\manifest\assets\learningCardImages\cardImage3.jpg
+copied media from: ./assets/learningCardImages/cardImage4.jpg to: sitecore\manifest\assets\learningCardImages\cardImage4.jpg
+copied media from: ./assets/learningCardImages/cardImage5.jpg to: sitecore\manifest\assets\learningCardImages\cardImage5.jpg
+copied media from: ./assets/learningCardImages/cardImage6.jpg to: sitecore\manifest\assets\learningCardImages\cardImage6.jpg
+copied media from: ./assets/authorImages/dmitri.jpg to: sitecore\manifest\assets\authorImages\dmitri.jpg
+copied media from: ./assets/authorImages/ryan.jpg to: sitecore\manifest\assets\authorImages\ryan.jpg
+copied media from: ./assets/authorImages/will.jpg to: sitecore\manifest\assets\authorImages\will.jpg
+Manifest has been generated and written to ./sitecore/manifest/sitecore-import.json
+JSS is manifest packaging test to ./sitecore/package...
+Adding assets/authorImages/dmitri.jpg
+Adding assets/authorImages/ryan.jpg
+Adding assets/authorImages/will.jpg
+Adding assets/learningCardImages/cardImage1.jpg
+Adding assets/learningCardImages/cardImage2.jpg
+Adding assets/learningCardImages/cardImage3.jpg
+Adding assets/learningCardImages/cardImage4.jpg
+Adding assets/learningCardImages/cardImage5.jpg
+Adding assets/learningCardImages/cardImage6.jpg
+Adding sitecore-import.json
+Wrote sitecore\package\test.1559247009225.manifest.zip
+Sending package sitecore\package\test.1559247009225.manifest.zip to https://sitecore911sug.productiveedge-dev.com/sitecore/api/jss/import...
+Sitecore has accepted import task JSSImport-test-8:10:11 PM
+Job started: JSSImport-test-8:10:11 PM
+Importing test as sitecore\JssImport
+Import database is master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Creating template section Content Tile Data on the content-tile-data template.
++ field 'tileTitle' to 'Content Tile Data' section on content-tile-data template
++ field 'tileDescription' to 'Content Tile Data' section on content-tile-data template
++ field 'tileImage' to 'Content Tile Data' section on content-tile-data template
+Creating template - page-route
+Creating template - ThemeFolder
+Creating template - ThemeItem
+Creating template - Announcement
+Creating template section Data on the Announcement template.
++ field 'heading' to 'Data' section on Announcement template
+Creating template - AuthorProfile
+Creating template section Data on the AuthorProfile template.
++ field 'authorName' to 'Data' section on AuthorProfile template
++ field 'authorImage' to 'Data' section on AuthorProfile template
++ field 'authorDetails' to 'Data' section on AuthorProfile template
+Creating template - ContentBlock
+Creating template section Data on the ContentBlock template.
++ field 'heading' to 'Data' section on ContentBlock template
++ field 'content' to 'Data' section on ContentBlock template
+Creating template - Dashboard
+Creating template section Data on the Dashboard template.
++ field 'heading' to 'Data' section on Dashboard template
++ field 'heading2' to 'Data' section on Dashboard template
+Creating template - DyanmicDisplayOfBlogArticles
+Creating template section Data on the DyanmicDisplayOfBlogArticles template.
++ field 'defaultCardImage' to 'Data' section on DyanmicDisplayOfBlogArticles template
+Creating template - LearningCard
+Creating template section Data on the LearningCard template.
++ field 'heading' to 'Data' section on LearningCard template
++ field 'link' to 'Data' section on LearningCard template
++ field 'image' to 'Data' section on LearningCard template
+Creating template - LearningResourceCard
+Creating template section Data on the LearningResourceCard template.
++ field 'heading' to 'Data' section on LearningResourceCard template
+Creating template - AuthorProfile Rendering Parameters
+Creating template section Data on the AuthorProfile Rendering Parameters template.
++ field 'headingColor' to 'Data' section on AuthorProfile Rendering Parameters template
++ field 'headerColor' to 'Data' section on AuthorProfile Rendering Parameters template
+Creating template - DyanmicDisplayOfBlogArticles Rendering Parameters
+Creating template section Data on the DyanmicDisplayOfBlogArticles Rendering Parameters template.
++ field 'contentSource' to 'Data' section on DyanmicDisplayOfBlogArticles Rendering Parameters template
+Creating template - LearningCard Rendering Parameters
+Creating template section Data on the LearningCard Rendering Parameters template.
++ field 'difficultyTag' to 'Data' section on LearningCard Rendering Parameters template
++ field 'learningCategoryTag' to 'Data' section on LearningCard Rendering Parameters template
++ field 'author' to 'Data' section on LearningCard Rendering Parameters template
+Creating placeholder settings - jss-main
+Creating placeholder settings - dashboard-content
+Creating placeholder settings - news
+Creating placeholder settings - jss-tabs
+Creating rendering - Announcement
+Creating app-level datasource folder Announcement (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/Announcement
++ /sitecore/content/test/Components
++ /sitecore/content/test/Components/Announcement
+Creating rendering - AuthorProfile
+Creating app-level datasource folder AuthorProfile (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/AuthorProfile
++ /sitecore/content/test/Components/AuthorProfile
+Creating rendering - ContentBlock
+Creating app-level datasource folder ContentBlock (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/ContentBlock
++ /sitecore/content/test/Components/ContentBlock
+Creating rendering - Dashboard
+Creating app-level datasource folder Dashboard (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/Dashboard
++ /sitecore/content/test/Components/Dashboard
+Creating rendering - DyanmicDisplayOfBlogArticles
+Creating app-level datasource folder DyanmicDisplayOfBlogArticles (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/DyanmicDisplayOfBlogArticles
++ /sitecore/content/test/Components/DyanmicDisplayOfBlogArticles
+Creating rendering - LearningCard
+Creating app-level datasource folder LearningCard (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/LearningCard
++ /sitecore/content/test/Components/LearningCard
+Creating rendering - LearningResourceCard
+Creating app-level datasource folder LearningResourceCard (AppLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/Components/LearningResourceCard
++ /sitecore/content/test/Components/LearningResourceCard
+Ensuring item path: /sitecore/layout/Layouts/Project/test/test Layout
++ /sitecore/layout/Layouts/Project/test/test Layout
+Added item at /sitecore/content/test/Components/Blog Grid
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage1
++ /sitecore/media library/test/assets
++ /sitecore/media library/test/assets/learningCardImages
++ /sitecore/media library/test/assets/learningCardImages/cardImage1
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage1
+Added item at /sitecore/content/test/Content
+Added item at /sitecore/content/test/Content/AuthorFolder
+Added item at /sitecore/content/test/Content/AuthorFolder/Dmitri-Larionov
+Added item at /sitecore/content/test/Content/AuthorFolder/Ryan-Kuchler
+Added item at /sitecore/content/test/Content/AuthorFolder/Will-Rolloff
+Added item at /sitecore/content/test/Content/colors
+Added item at /sitecore/content/test/Content/colors/Black
+Added item at /sitecore/content/test/Content/colors/939393
+Added item at /sitecore/content/test/Content/colors/3d6999
+Added item at /sitecore/content/test/Content/colors/c8c8c8
+Added item at /sitecore/content/test/Content/colors/CC2314
+Added item at /sitecore/content/test/Content/colors/00ffff
+Added item at /sitecore/content/test/Content/colors/0066cc
+Added item at /sitecore/content/test/Content/colors/ff6b40
+Added item at /sitecore/content/test/Content/colors/f4f4f4
+Added item at /sitecore/content/test/Content/colors/ffffff
+Added item at /sitecore/content/test/Content/DifficultyTags
+Added item at /sitecore/content/test/Content/DifficultyTags/advanced
+Added item at /sitecore/content/test/Content/DifficultyTags/beginner
+Added item at /sitecore/content/test/Content/DifficultyTags/intermediate
+Added item at /sitecore/content/test/Content/DifficultyTags/ninja
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/angular
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/css
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/database
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/html
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/javascript
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/react
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/redis
+Added item at /sitecore/content/test/Content/LearningCategoriesFolder/api
+Added item at /sitecore/content/test/Content/ThemeFolder
+Added item at /sitecore/content/test/Content/ThemeFolder/dark
+Added item at /sitecore/content/test/Content/ThemeFolder/light
+Added item at /sitecore/content/test/home
+
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+
+Ensuring item path: /sitecore/content/test/home/Page Components
+
++ /sitecore/content/test/home/Page Components
+
+Added item at /sitecore/content/test/home/Page Components/home-jss-main-Dashboard-1
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-1
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-2
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage2
++ /sitecore/media library/test/assets/learningCardImages/cardImage2
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage2
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-3
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage3
++ /sitecore/media library/test/assets/learningCardImages/cardImage3
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage3
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-4
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage4
++ /sitecore/media library/test/assets/learningCardImages/cardImage4
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage4
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-5
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage5
++ /sitecore/media library/test/assets/learningCardImages/cardImage5
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage5
+
+Added item at /sitecore/content/test/home/Page Components/home-dashboard-content-74B6AC39-8573-5B42-92DF-84F089FBB805-0-LearningCard-6
+Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardImage6
++ /sitecore/media library/test/assets/learningCardImages/cardImage6
+Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage6
+
+Added item at /sitecore/content/test/home/about
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/about/Page Components
++ /sitecore/content/test/home/about/Page Components
+Added item at /sitecore/content/test/home/about/Page Components/about-jss-main-Dashboard-1
+Added item at /sitecore/content/test/home/authors
+Added item at /sitecore/content/test/home/authors/DmitriLarionov
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/authors/DmitriLarionov/Page Components
++ /sitecore/content/test/home/authors/DmitriLarionov/Page Components
+Added item at /sitecore/content/test/home/authors/DmitriLarionov/Page Components/DmitriLarionov-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/media library/test/assets/authorImages/dmitri
++ /sitecore/media library/test/assets/authorImages
++ /sitecore/media library/test/assets/authorImages/dmitri
+Created media item at /sitecore/media library/test/assets/authorImages/dmitri
+Added item at /sitecore/content/test/home/authors/RyanKuchler
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/authors/RyanKuchler/Page Components
++ /sitecore/content/test/home/authors/RyanKuchler/Page Components
+Added item at /sitecore/content/test/home/authors/RyanKuchler/Page Components/RyanKuchler-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/media library/test/assets/authorImages/ryan
++ /sitecore/media library/test/assets/authorImages/ryan
+Created media item at /sitecore/media library/test/assets/authorImages/ryan
+Added item at /sitecore/content/test/home/authors/WillRolloff
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/authors/WillRolloff/Page Components
++ /sitecore/content/test/home/authors/WillRolloff/Page Components
+Added item at /sitecore/content/test/home/authors/WillRolloff/Page Components/WillRolloff-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/media library/test/assets/authorImages/will
++ /sitecore/media library/test/assets/authorImages/will
+Created media item at /sitecore/media library/test/assets/authorImages/will
+Added item at /sitecore/content/test/home/blog
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/blog/Page Components
++ /sitecore/content/test/home/blog/Page Components
+Added item at /sitecore/content/test/home/blog/Page Components/blog-jss-main-Dashboard-1
+Added item at /sitecore/content/test/home/blog/blog1
+Added item at /sitecore/content/test/home/careers
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/careers/Page Components
++ /sitecore/content/test/home/careers/Page Components
+Added item at /sitecore/content/test/home/careers/Page Components/careers-jss-main-Dashboard-1
+Added item at /sitecore/content/test/home/contact
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/contact/Page Components
++ /sitecore/content/test/home/contact/Page Components
+Added item at /sitecore/content/test/home/contact/Page Components/contact-jss-main-Dashboard-1
+Added item at /sitecore/content/test/home/news
+Creating route-level datasource folder (RouteLevelDatasourceStrategy)
+Ensuring item path: /sitecore/content/test/home/news/Page Components
++ /sitecore/content/test/home/news/Page Components
+Added item at /sitecore/content/test/home/news/Page Components/news-jss-main-Dashboard-1
+Ensuring item path: /sitecore/content/test/test Dictionary
++ /sitecore/content/test/test Dictionary
+Adding dictionary item About
+Adding dictionary item Blog
+Adding dictionary item News
+Adding dictionary item Contact Us
+Reloaded all GraphQL schemas.
+
+Import is complete.
+
+IMPORT WARNING(S) OCCURRED!
+Import requested wipe import on 'test', existing app items will be removed before import. Wipe mode (SitecoreJSS.WipeMode) is configured as 'Recycle'.
+> npm run build --
+
+> test@11.0.2 build C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact
+> npm-run-all --serial bootstrap:connected build:client build:server
+
+
+> test@11.0.2 bootstrap:connected C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact
+> node scripts/bootstrap.js
+
+Writing runtime config to C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\src\temp\config.js
+Registering JSS component Announcement
+Registering JSS component AuthorProfile
+Registering JSS component Dashboard
+Registering JSS component DyanmicDisplayOfBlogArticles
+Registering JSS component LearningCard
+Registering JSS component LearningResourceCard
+Writing component factory to C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\src\temp\componentFactory.js
+
+> test@11.0.2 build:client C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact
+> cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath "react-scripts build"
+
+Creating an optimized production build...
+Compiled with warnings.
+
+./src/components/LearningCard/index.js
+  Line 12:  'theme' is assigned a value but never used             no-unused-vars
+  Line 27:   'categoryTagClass' is assigned a value but never used  no-unused-vars
+
+./src/components/DyanmicDisplayOfBlogArticles/index.js
+  Line 5:   'Text' is defined but never used                                   no-unused-vars
+  Line 61:   'content' is assigned a value but never used                       no-unused-vars
+  Line 96:   'sitecoreItemsContainerStyles' is assigned a value but never used  no-unused-vars
+  Line 118:  'itemStyle' is assigned a value but never used                     no-unused-vars
+  Line 122:  'name' is assigned a value but never used                          no-unused-vars
+  Line 124:  'urlLastItem' is assigned a value but never used                   no-unused-vars
+  Line 144:  'itemId' is assigned a value but never used                        no-unused-vars
+
+./src/Layout.js
+  Line 83:  Expected a default case  default-case
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  203.47 KB (+80.03 KB)  build\static\js\1.8e36864d.chunk.js
+  44.38 KB (+40.31 KB)   build\static\js\main.00b3d7a5.chunk.js
+  21.85 KB (-1 B)        build\static\css\1.e3384341.chunk.css
+  931 B (+1 B)           build\static\css\main.a1644ac6.chunk.css
+  769 B                  build\static\js\runtime~main.9ff5491a.js
+
+The project was built assuming it is hosted at /dist/test/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  http://bit.ly/CRA-deploy
+
+
+> test@11.0.2 build:server C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact
+> cross-env-shell NODE_ENV=production "webpack --config server/server.webpack.config.js"
+
+[BABEL] Note: The code generator has deoptimised the styling of C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\src\components\DyanmicDisplayOfBlogArticles\jssGqlUtils.js as it exceeds the max of 500KB.
+Hash: 54bd5b223c79fb002fb2
+Version: webpack 4.19.1
+Time: 5117ms
+Built at: 2019-05-30 15:12:05
+                    Asset      Size  Chunks             Chunk Names
+../build/server.bundle.js  2.28 MiB       0  [emitted]  main
+Entrypoint main = ../build/server.bundle.js
+ [10] ./src/temp/config.js 429 bytes {0} [built]
+ [20] external "stream" 42 bytes {0} [built]
+ [26] external "url" 42 bytes {0} [built]
+ [30] external "http" 42 bytes {0} [built]
+ [35] external "https" 42 bytes {0} [built]
+ [38] external "util" 42 bytes {0} [built]
+ [47] external "zlib" 42 bytes {0} [built]
+ [67] ./src/temp/GraphQLFragmentTypes.json 4.68 KiB {0} [built]
+ [78] ./src/assets/sc_logo.png 24.9 KiB {0} [built]
+ [79] ./build/index.html 2.19 KiB {0} [built]
+[114] ./node_modules/encoding/lib sync 160 bytes {0} [optional] [built]
+[129] (webpack)/buildin/module.js 497 bytes {0} [built]
+[130] (webpack)/buildin/harmony-module.js 573 bytes {0} [built]
+[201] ./src/assets/app.css 2.01 KiB {0} [built]
+[202] ./server/server.js + 134 modules 1.08 MiB {0} [built]
+      | ./src/Layout.js 4.1 KiB [built]
+      | ./server/server.js 6.68 KiB [built]
+      | ./src/AppRoot.js 1.94 KiB [built]
+      | ./src/RouteHandler.js 10.3 KiB [built]
+      | ./src/i18n.js 2.58 KiB [built]
+      | ./src/NotFound.js 1010 bytes [built]
+      | ./src/lib/GraphQLClientFactory.js 2.01 KiB [built]
+      | ./src/dataFetcher.js 697 bytes [built]
+      | ./src/lib/SitecoreContextFactory.js 594 bytes [built]
+      | ./src/temp/componentFactory.js 990 bytes [built]
+      | ./src/Footer.js 1.45 KiB [built]
+      | ./src/utils/jssUtils.js 185 bytes [built]
+      |     + 123 hidden modules
+    + 238 hidden modules
+
+WARNING in ./node_modules/encoding/lib/iconv-loader.js 9:12-34
+Critical dependency: the request of a dependency is an expression
+ @ ./node_modules/encoding/lib/encoding.js
+ @ ./node_modules/node-fetch/lib/body.js
+ @ ./node_modules/node-fetch/index.js
+ @ ./node_modules/isomorphic-fetch/fetch-npm-node.js
+ @ ./src/lib/GraphQLClientFactory.js
+ @ ./server/server.js
+Copying C:\PeDev\PE\LunchAndLearns\JssCodeFirstDemo\learning-center-inc-demo\LearningCenterIncReact\build to \dist\test...ist\test...
+
+JSS app build artifacts have been deployed to Sitecore.
