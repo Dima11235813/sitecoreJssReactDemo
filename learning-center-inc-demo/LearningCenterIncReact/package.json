@@ -1,16 +1,16 @@
 {
-  "name": "test",
+  "name": "learningcenter",
   "description": "Application utilizing Sitecore JavaScript Services and React (create-react-app).",
   "version": "11.0.2",
   "private": true,
   "config": {
-    "appName": "test",
+    "appName": "learningcenter",
     "rootPlaceholders": [
       "jss-main"
     ],
-    "sitecoreDistPath": "/dist/test",
+    "sitecoreDistPath": "/dist/learningcenter",
     "sitecoreConfigPath": "/App_Config/Include/zzz",
-    "graphQLEndpointPath": "/api/test",
+    "graphQLEndpointPath": "/api/learningcenter",
     "language": "en"
   },
   "engines": {

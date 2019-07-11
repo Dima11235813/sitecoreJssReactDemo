@@ -16,8 +16,8 @@ export default function(manifest) {
       { name: 'authorDetails', type: CommonFieldTypes.RichText },
     ],
     params: [
-      { name: "headingColor", displayName: 'Author Heading Color', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/Colors' },
-      { name: "headerColor", displayName: 'Author Heading Color', type: 'droplist', source: '/sitecore/content/learningcenterincreact/Content/Colors' }
+      { name: "headingColor", displayName: 'Author Heading Color', type: 'droplist', source: '/sitecore/content/learningcenter/Content/Colors' },
+      { name: "headerColor", displayName: 'Author Heading Color', type: 'droplist', source: '/sitecore/content/learningcenter/Content/Colors' }
     ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
