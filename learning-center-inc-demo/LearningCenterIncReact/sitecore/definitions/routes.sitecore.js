@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
-import path from 'path';
-import { Manifest, RouteDefinition, CommonFieldTypes } from '@sitecore-jss/sitecore-jss-manifest';
-import { mergeFs, MergeFsResult } from '@sitecore-jss/sitecore-jss-dev-tools';
+import path from "path";
+import {
+  Manifest,
+  RouteDefinition,
+  CommonFieldTypes
+} from "@sitecore-jss/sitecore-jss-manifest";
+import { mergeFs, MergeFsResult } from "@sitecore-jss/sitecore-jss-dev-tools";
 
 /* eslint-enable no-unused-vars */
 
@@ -19,27 +23,25 @@ export default function addRoutesToManifest(manifest) {
   // which most apps will want for metadata like page titles, SEO metas, or OpenGraph.
   // You can add additional non-default route types using `manifest.addRouteType()`,
   // which routes can use by setting `template: YourCustomRouteTypeName` in their definition.
-  const appTemplateSection = 'Page Metadata';
+  const appTemplateSection = "Page Metadata";
 
   manifest.setDefaultRouteType({
-    name: 'App Route',
+    name: "App Route",
     fields: [
       {
-        name: 'pageTitle',
-        displayName: 'Page Title',
+        name: "pageTitle",
+        displayName: "Page Title",
         section: appTemplateSection,
-        type: CommonFieldTypes.SingleLineText,
-      },
+        type: CommonFieldTypes.SingleLineText
+      }
     ],
-    params: [
-      { name: "textTheme", displayName: 'Site Theme', type: 'droplist', source: '/sitecore/content/learningcenter/Content/ThemeFolder', standardValue: "dark" }
-    ],
-    insertOptions: ['App Route'],
+    // params: [],
+    insertOptions: ["App Route"]
   });
 
-  return mergeFs('./data/routes') // relative to process invocation (i.e. your package.json)
-    .then((result) => convertToRoutes(result, manifest.language))
-    .then((routeData) => {
+  return mergeFs("./data/routes") // relative to process invocation (i.e. your package.json)
+    .then(result => convertToRoutes(result, manifest.language))
+    .then(routeData => {
       manifest.addRoute(routeData);
     });
 }
@@ -55,10 +57,10 @@ function convertToRoutes(data, language) {
   let routeData;
 
   // regex that matches the expected route file name
-  const routeFilePattern = new RegExp(`^${language}\\.(yaml|yml|json)$`, 'i');
+  const routeFilePattern = new RegExp(`^${language}\\.(yaml|yml|json)$`, "i");
 
   // find the expected file in the list of files in the current folder
-  const routeFileData = data.files.find((f) => routeFilePattern.test(f.filename));
+  const routeFileData = data.files.find(f => routeFilePattern.test(f.filename));
 
   // parse the route data file contents
   if (routeFileData && routeFileData.contents) {
@@ -68,7 +70,7 @@ function convertToRoutes(data, language) {
       // no name = imply one from parent folder name
       routeData.name = path.basename(path.dirname(routeFileData.path));
       // special case for the home route item as its parent folder is 'routes'
-      if (routeData.name === 'routes') routeData.name = 'home';
+      if (routeData.name === "routes") routeData.name = "home";
     }
   } else {
     console.warn(
@@ -80,8 +82,8 @@ The route will not be added to the manifest. Empty folders can cause this warnin
   // recursively crawl child routes (folders)
   if (routeData && data.folders.length > 0) {
     routeData.children = data.folders
-      .map((folder) => convertToRoutes(folder, language))
-      .filter((route) => route); // remove null results
+      .map(folder => convertToRoutes(folder, language))
+      .filter(route => route); // remove null results
   }
 
   return routeData;
