@@ -6,6 +6,7 @@ import {
 import { NavLink } from "react-router-dom";
 import { withNamespaces } from "react-i18next";
 import Helmet from "react-helmet";
+import LayoutFooter from './Footer'
 
 // Using bootstrap is completely optional. It's used here to provide a clean layout for samples,
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
@@ -83,6 +84,7 @@ const Layout = ({ route }) => {
   //     containerClassStyle = "lightTheme"
   //     break
   // }
+  debugger
   return (
     <React.Fragment>
       {/* react-helmet enables setting <head> contents, like title and OG meta tags */}
@@ -112,7 +114,7 @@ const Layout = ({ route }) => {
         style={containerStyle}
       >
         <div className="containter">
-          <Placeholder name="jss-main" rendering={route} context={context} />
+          <Placeholder name="jss-main" rendering={route} />
         </div>
       </div>
 

@@ -9,7 +9,7 @@ const LearningCard = (props) => {
 const {heading, link, image} = props.fields
 
 const params = props.params ? props.params : null
-const {difficultyTag, learningCategoryTag, author ,theme} = params
+const {difficultyTag, learningCategoryTag, author } = params
 
 let authorUrl = '/'
 let authorNameForDisplay = ''
