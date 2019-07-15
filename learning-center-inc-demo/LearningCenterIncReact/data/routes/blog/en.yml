@@ -4,8 +4,6 @@ template: folder
 icon: "/~/icon/peoplev2/32x32/binocular.png"
 fields:
   pageTitle: About
-params:
-  textTheme: "light"
 placeholders:
   jss-main: 
   - componentName: Dashboard

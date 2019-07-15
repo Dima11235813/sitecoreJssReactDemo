@@ -1,7 +1,5 @@
 fields:
   pageTitle: WillRolloff
-params:
-  textTheme: "light"
 placeholders:
   jss-main:
   - componentName: AuthorProfile
