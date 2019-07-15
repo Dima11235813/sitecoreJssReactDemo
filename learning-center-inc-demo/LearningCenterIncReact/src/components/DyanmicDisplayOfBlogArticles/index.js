@@ -24,7 +24,7 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
 
   componentDidMount = () => {
     const { graphQLEndpointPath, sitecoreApiKey } = config;
-    const { gridContentSource } = this.props.params;
+    const { gridContentSource } = this.props.params ? this.props.params : "";
     //call graph ql endpoint to get a list of all articles under blog
     //check if running in jss start
     if (this.jssCodeFirstState) {

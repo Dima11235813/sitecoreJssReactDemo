@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import AppRoot from './AppRoot';
-import { setServerSideRenderingState } from './RouteHandler';
-import GraphQLClientFactory from './lib/GraphQLClientFactory';
-import config from './temp/config';
-import i18ninit from './i18n';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import AppRoot from "./AppRoot";
+import { setServerSideRenderingState } from "./RouteHandler";
+import GraphQLClientFactory from "./lib/GraphQLClientFactory";
+import config from "./temp/config";
+import i18ninit from "./i18n";
 
 /* eslint-disable no-underscore-dangle */
 
@@ -25,7 +25,7 @@ let renderFunction = ReactDOM.render;
   SSR is initiated from /server/server.js.
 */
 let __JSS_STATE__ = null;
-const ssrRawJson = document.getElementById('__JSS_STATE__');
+const ssrRawJson = document.getElementById("__JSS_STATE__");
 if (ssrRawJson) {
   __JSS_STATE__ = JSON.parse(ssrRawJson.innerHTML);
 }
@@ -45,9 +45,15 @@ if (__JSS_STATE__) {
 // Apollo supports SSR of GraphQL queries, so like JSS SSR, it has an object we can pre-hydrate the client cache from
 // to avoid needing to re-run GraphQL queries after the SSR page loads
 const initialGraphQLState =
-  __JSS_STATE__ && __JSS_STATE__.APOLLO_STATE ? __JSS_STATE__.APOLLO_STATE : null;
+  __JSS_STATE__ && __JSS_STATE__.APOLLO_STATE
+    ? __JSS_STATE__.APOLLO_STATE
+    : null;
 
-const graphQLClient = GraphQLClientFactory(config.graphQLEndpoint, false, initialGraphQLState);
+const graphQLClient = GraphQLClientFactory(
+  config.graphQLEndpoint,
+  false,
+  initialGraphQLState
+);
 
 /*
   App Rendering
@@ -56,7 +62,7 @@ const graphQLClient = GraphQLClientFactory(config.graphQLEndpoint, false, initia
 // note: if not making a multlingual app, the dictionary init can be removed.
 i18ninit().then(() => {
   // HTML element to place the app into
-  const rootElement = document.getElementById('root');
+  const rootElement = document.getElementById("root");
 
   renderFunction(
     <AppRoot
