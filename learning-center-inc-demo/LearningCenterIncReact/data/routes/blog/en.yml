@@ -5,9 +5,9 @@ icon: "/~/icon/peoplev2/32x32/binocular.png"
 fields:
   pageTitle: About
 placeholders:
-  jss-main: 
-  - componentName: Dashboard
-    fields:
-      heading: "Generic Inc's Training Center"
-      heading2: "We Write Code and We Know Things"
-  - id: blog-grid
+  jss-main:
+    - componentName: Dashboard
+      fields:
+        heading: "Generic Inc's Training Center"
+        heading2: "We Write Code and We Know Things"
+  # - id: blog-grid
