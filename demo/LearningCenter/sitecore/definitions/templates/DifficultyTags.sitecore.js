@@ -8,7 +8,7 @@ import { CommonFieldTypes, Manifest } from '@sitecore-jss/sitecore-jss-manifest'
 export default function(manifest) {
   manifest.addTemplate({
     name: 'DifficultyTags',
-    displayName: 'Difficulty Tag Option',
+    displayName: 'Difficulty Tags',
     icon: '/~/icon/applicationsv2/32x32/star2_yellow.png'
   });
 }

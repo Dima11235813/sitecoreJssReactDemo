@@ -1,13 +1,9 @@
-id: blog
-name: blog
-template: folder
-icon: "/~/icon/peoplev2/32x32/binocular.png"
 fields:
-  pageTitle: About
+  pageTitle: Blog
 placeholders:
   jss-main:
     - componentName: Dashboard
       fields:
         heading: "Generic Inc's Training Center"
         heading2: "We Write Code and We Know Things"
-  # - id: blog-grid
+    - id: blog-grid

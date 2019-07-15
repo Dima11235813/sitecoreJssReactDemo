@@ -5,29 +5,20 @@ import { Text, Link as JssLink, Image } from '@sitecore-jss/sitecore-jss-react';
 import './learningCardStyles.css'
 
 const LearningCard = (props) => {
-  
-const {heading, link, image} = props.fields
 
+const {heading, link, image} = props.fields
 const params = props.params ? props.params : null
 const {difficultyTag, learningCategoryTag, author } = params
 
 let authorUrl = '/'
 let authorNameForDisplay = ''
+
 if(author){
   authorUrl = author.split('-').join('')
   authorNameForDisplay = author.split('-').join(' ')
 }
-
-//set up styles for difficulty tag
-let difficultyTagClass = ""
-if(difficultyTag){
-  difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
-}
-//set up styles for category tag
-let categoryTagClass = ""
-if(difficultyTag){
-  categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
-}
+let difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
+let categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
 
 return(
   <div className="learning-card-container">

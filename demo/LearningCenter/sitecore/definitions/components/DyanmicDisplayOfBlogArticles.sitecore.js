@@ -12,10 +12,7 @@ export default function(manifest) {
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: "defaultCardImage", displayName: 'Default Grid Card', type: CommonFieldTypes.Image },
-    ],
-    params: [
-      { name: "contentSource", displayName: 'Grid Content Source', type: "Internal Link", source: "/sitecore/content/learningcenter/home" },
-    ],
+    ]
     /*
     standardValue: '<image alt="content card" mediaid="{14478F87-8535-526D-8CAD-3E2D1DD84C2B}" />' 
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

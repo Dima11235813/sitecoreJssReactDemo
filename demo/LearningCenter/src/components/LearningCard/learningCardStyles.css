@@ -1,97 +1,96 @@
-.learning-card-container{
-    background-color: black;
-    height: 650px;
-    position: relative;
+.learning-card-container {
+  background-color: black;
+  height: 550px;
+  position: relative;
 }
-.learning-card-text{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    display: inline-block;
-    position: relative;
-    pointer-events: none;
-    margin: 0px;
-    word-wrap: normal;
-    padding: 1rem 30px; 
-    color: white;
-    background-color: black;
-    /* text-align: center;   */
-    min-height: 160px;
-    /* set it so this element doesn't get a hover event */
-    /* pointer-events: none; */
+.learning-card-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  pointer-events: none;
+  margin: 0px;
+  word-wrap: normal;
+  padding: 1rem 30px;
+  color: white;
+  background-color: black;
+  /* text-align: center;   */
+  min-height: 160px;
+  /* set it so this element doesn't get a hover event */
+  /* pointer-events: none; */
 }
-.learning-card-image img{
-    width: 100%;
-    height: auto;
-    padding: 30px;
-    overflow: hidden;
-    /* background-size: contain; */
+.learning-card-image img {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  overflow: hidden;
+  /* background-size: contain; */
 }
-.learning-card-difficulty-tag-container{
-    /* margin: auto; */
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    padding-left: 30px;
-    min-height: 40px;
+.learning-card-difficulty-tag-container {
+  /* margin: auto; */
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-left: 30px;
+  min-height: 40px;
 }
-.learning-card-category-tag{
-    text-transform: uppercase;
-    font-size: 150%;
-    margin-right: 30px;
-    float: right;
+.learning-card-category-tag {
+  text-transform: uppercase;
+  font-size: 150%;
+  margin-right: 30px;
+  margin-left: 1em;
 }
-.learning-card-author-container{
-    bottom: 0px;
-    font-size: 1.5rem;
-    color: white;
-    padding: 0px 0px 1rem 30px;
-    position: absolute;
-
+.learning-card-author-container {
+  bottom: 0px;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0px 0px 1rem 30px;
+  position: absolute;
 }
-.learning-card-author-container a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
+.learning-card-author-container a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
 }
-.learning-card-author:hover{
-    color: red;
-    text-decoration: none;
+.learning-card-author:hover {
+  color: red;
+  text-decoration: none;
 }
 
 /* ON HOVER STYLES */
-.learning-card-container:hover{
-    background-color: rgb(41, 41, 41);
-    cursor: pointer;
+.learning-card-container:hover {
+  background-color: rgb(41, 41, 41);
+  cursor: pointer;
 }
-.learning-card-container:hover .learning-card-text{
-    letter-spacing: 1.1px;
-    background-color: rgb(41, 41, 41);
-    color: orange;
-    padding: 1rem;
+.learning-card-container:hover .learning-card-text {
+  letter-spacing: 1.1px;
+  background-color: rgb(41, 41, 41);
+  color: orange;
+  padding: 1rem;
 }
-.learning-card-container:hover .learning-card-image img{
-    /* padding: 10px;
+.learning-card-container:hover .learning-card-image img {
+  /* padding: 10px;
     height: calc(100% + 2rem) */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.learning-card-container:hover .learning-card-difficulty-tag-container{
-    margin: auto;
-    padding-left: 1rem;
+.learning-card-container:hover .learning-card-difficulty-tag-container {
+  margin: auto;
+  padding-left: 1rem;
 }
-.learning-card-container:hover .learning-card-category-tag{
-    margin-right: 1rem;
+.learning-card-container:hover .learning-card-category-tag {
+  margin-right: 1rem;
 }
-.learning-card-container:hover .learning-card-author-container{
-    color: orange;
-    padding-left: 1rem;
+.learning-card-container:hover .learning-card-author-container {
+  color: orange;
+  padding-left: 1rem;
 }
-.learning-card-container:hover .learning-card-author{
-    color: orange;
-    text-decoration: underline;
-    text-decoration-color: orange;
+.learning-card-container:hover .learning-card-author {
+  color: orange;
+  text-decoration: underline;
+  text-decoration-color: orange;
 }
-.learning-card-author:hover{
-    color: red;
-    text-decoration: underline;
-    text-decoration-color: red;
+.learning-card-author:hover {
+  color: red;
+  text-decoration: underline;
+  text-decoration-color: red;
 }

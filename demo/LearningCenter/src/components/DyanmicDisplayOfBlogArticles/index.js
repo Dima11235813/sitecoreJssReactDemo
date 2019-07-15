@@ -1,28 +1,30 @@
 import React from "react";
-// import axios from "axios";
+import axios from "axios";
 // //https://mdbootstrap.com/docs/react/advanced/popovers/
 // // import { MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBBtn, MDBContainer } from "mdbreact";
 // import { Text } from "@sitecore-jss/sitecore-jss-react";
-// import { setJssState } from "../../utils/jssUtils";
-// import {
-//   generateJssQuery,
-//   generateQuery,
-//   mockedResponse,
-//   graphQlQuery
-// } from "./jssGqlUtils";
-// import config from "../../temp/config";
+import { setJssState } from "../../utils/jssUtils";
+import {
+  generateJssQuery,
+  generateQuery,
+  mockedResponse,
+  graphQlQuery
+} from "./jssGqlUtils";
+import config from "../../temp/config";
 
 class DyanmicDisplayOfBlogArticles extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //set up var to container whether we are in jss code first mode
-  // this.jssCodeFirstState = setJssState(this); //pass context so util has access to passed props
-  // this.state = {
-  //   content: null
-  // };
-  // }
+  constructor(props) {
+    super(props);
+  // set up var to container whether we are in jss code first mode
+  this.jssCodeFirstState = setJssState(this); //pass context so util has access to passed props
+    this.state = {
+      content: null
+    };
+  }
 
-  // componentDidMount = () => {
+  componentDidMount = () => {
+    debugger
+    // const authorsUrl = "/sitecore/content/learningcenter/home/authors"
     // const { graphQLEndpointPath, sitecoreApiKey } = config;
     // const { gridContentSource } = this.props.params;
     // //call graph ql endpoint to get a list of all articles under blog
@@ -33,9 +35,9 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
     //   });
     // } else if (this.props.context.pageEditing) {
     //   //generate jss query if in editing mode
-    //   graphQlQuery = generateJssQuery(gridContentSource);
+    //   graphQlQuery = generateJssQuery(authorsUrl);
     // } else {
-    //   graphQlQuery = generateQuery(gridContentSource);
+    //   graphQlQuery = generateQuery(authorsUrl);
     // }
     // if (!this.jssCodeFirstState) {
     //   axios({
@@ -55,7 +57,7 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
     //       ${err}`);
     //     });
     // }
-  // };
+  };
   render() {
     return <div></div>
     // const { defaultCardImage } = this.props.fields;

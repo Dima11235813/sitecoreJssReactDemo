@@ -1,5 +1,5 @@
 fields:
-  pageTitle: About
+  pageTitle: News
 placeholders:
   jss-main:
   - componentName: Dashboard

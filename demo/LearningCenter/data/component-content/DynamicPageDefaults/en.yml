@@ -6,6 +6,4 @@ fields:
   defaultCardImage:
     src: /assets/learningCardImages/cardImage1.jpg
     alt: "play icon"
-params: 
-  contentSource: "/sitecore/content/learningcenter/blog"
   
