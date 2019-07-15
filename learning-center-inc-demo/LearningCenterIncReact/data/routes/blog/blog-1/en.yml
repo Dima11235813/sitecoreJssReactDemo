@@ -10,5 +10,5 @@ fields:
   #   - id: blog-article-type-tbd
   tileDescription: Blog article 1
   tileImage:
-    src: /assets/learningCardImages\cardImage1.jpg
+    src: /assets/learningCardImages/cardImage1.jpg
     alt: "Video 1"

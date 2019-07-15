@@ -7,5 +7,5 @@ fields:
     src: /assets/learningCardImages/cardImage1.jpg
     alt: "play icon"
 params: 
-  contentSource: "/sitecore/content/test/blog"
+  contentSource: "/sitecore/content/learningcenter/blog"
   

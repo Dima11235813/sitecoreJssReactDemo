@@ -32,7 +32,7 @@ export default function addRoutesToManifest(manifest) {
       },
     ],
     params: [
-      { name: "textTheme", displayName: 'Site Theme', type: 'droplist', source: '/sitecore/content/test/Content/ThemeFolder', standardValue: "dark" }
+      { name: "textTheme", displayName: 'Site Theme', type: 'droplist', source: '/sitecore/content/learningcenter/Content/ThemeFolder', standardValue: "dark" }
     ],
     insertOptions: ['App Route'],
   });
