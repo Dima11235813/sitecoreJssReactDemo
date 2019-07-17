@@ -13,7 +13,7 @@ placeholders:
             params:
               difficultyTag: "beginner"
               learningCategoryTag: "css"
-              author: "Dmitri-Larionov"
+              author: "DmitriLarionov"
             fields:
               heading: "Learn Cascading Style Sheets"
               link:
@@ -26,7 +26,7 @@ placeholders:
             params:
               difficultyTag: "intermediate"
               learningCategoryTag: "html"
-              author: "Ryan-Kuchler"
+              author: "RyanKuchler"
             fields:
               heading: "Accessibility with HTML5"
               link:
@@ -39,7 +39,7 @@ placeholders:
             params:
               difficultyTag: "advanced"
               learningCategoryTag: "react"
-              author: "Dmitri-Larionov"
+              author: "DmitriLarionov"
             fields:
               heading: "Using React's Context API"
               link:
@@ -52,7 +52,7 @@ placeholders:
             params:
               difficultyTag: "ninja"
               learningCategoryTag: "redis"
-              author: "Will-Rolloff"
+              author: "WillRolloff"
             fields:
               heading: "Cache Invalidation with Redis"
               link:
@@ -65,7 +65,7 @@ placeholders:
             params:
               difficultyTag: "advanced"
               learningCategoryTag: "react"
-              author: "Will-Rolloff"
+              author: "WillRolloff"
             fields:
               heading: "Refactor AngularJS to React"
               link:
@@ -78,7 +78,7 @@ placeholders:
             params:
               difficultyTag: "ninja"
               learningCategoryTag: "api"
-              author: "Ryan-Kuchler"
+              author: "RyanKuchler"
             fields:
               heading: "Create a GraphQL API in .NET CORE"
               link:

@@ -166,8 +166,8 @@ Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardI
 Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage1
 Added item at /sitecore/content/test/Content
 Added item at /sitecore/content/test/Content/AuthorFolder
-Added item at /sitecore/content/test/Content/AuthorFolder/Dmitri-Larionov
-Added item at /sitecore/content/test/Content/AuthorFolder/Ryan-Kuchler
+Added item at /sitecore/content/test/Content/AuthorFolder/DmitriLarionov
+Added item at /sitecore/content/test/Content/AuthorFolder/RyanKuchler
 Added item at /sitecore/content/test/Content/AuthorFolder/Will-Rolloff
 Added item at /sitecore/content/test/Content/colors
 Added item at /sitecore/content/test/Content/colors/Black

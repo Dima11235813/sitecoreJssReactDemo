@@ -12,5 +12,5 @@ fields:
     src: /assets/learningCardImages/cardImage2.jpg
     alt: "Card 2"
   authorTag:
-    - id: Dmitri-Larionov
+    - id: DmitriLarionov
 
