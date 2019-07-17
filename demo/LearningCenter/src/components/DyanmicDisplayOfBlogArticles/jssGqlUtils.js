@@ -40,22 +40,22 @@ export const mockedResponse = {
     "item": {
       "children": [
         {
-          "name": "DmitriLarionov",
-          "url": "/authors/DmitriLarionov",
+          "name": "Dmitri-Larionov",
+          "url": "/authors/Dmitri-Larionov",
           "template": {
             "name": "App Route"
           }
         },
         {
-          "name": "RyanKuchler",
-          "url": "/authors/RyanKuchler",
+          "name": "Ryan-Kuchler",
+          "url": "/authors/Ryan-Kuchler",
           "template": {
             "name": "App Route"
           }
         },
         {
-          "name": "WillRolloff",
-          "url": "/authors/WillRolloff",
+          "name": "Will-Rolloff",
+          "url": "/authors/Will-Rolloff",
           "template": {
             "name": "App Route"
           }

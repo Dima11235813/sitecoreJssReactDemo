@@ -166,8 +166,8 @@ Ensuring item path: /sitecore/media library/test/assets/learningCardImages/cardI
 Created media item at /sitecore/media library/test/assets/learningCardImages/cardImage1
 Added item at /sitecore/content/test/Content
 Added item at /sitecore/content/test/Content/AuthorFolder
-Added item at /sitecore/content/test/Content/AuthorFolder/DmitriLarionov
-Added item at /sitecore/content/test/Content/AuthorFolder/RyanKuchler
+Added item at /sitecore/content/test/Content/AuthorFolder/Dmitri-Larionov
+Added item at /sitecore/content/test/Content/AuthorFolder/Ryan-Kuchler
 Added item at /sitecore/content/test/Content/AuthorFolder/Will-Rolloff
 Added item at /sitecore/content/test/Content/colors
 Added item at /sitecore/content/test/Content/colors/Black
@@ -240,28 +240,28 @@ Ensuring item path: /sitecore/content/test/home/about/Page Components
 + /sitecore/content/test/home/about/Page Components
 Added item at /sitecore/content/test/home/about/Page Components/about-jss-main-Dashboard-1
 Added item at /sitecore/content/test/home/authors
-Added item at /sitecore/content/test/home/authors/DmitriLarionov
+Added item at /sitecore/content/test/home/authors/Dmitri-Larionov
 Creating route-level datasource folder (RouteLevelDatasourceStrategy)
-Ensuring item path: /sitecore/content/test/home/authors/DmitriLarionov/Page Components
-+ /sitecore/content/test/home/authors/DmitriLarionov/Page Components
-Added item at /sitecore/content/test/home/authors/DmitriLarionov/Page Components/DmitriLarionov-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/content/test/home/authors/Dmitri-Larionov/Page Components
++ /sitecore/content/test/home/authors/Dmitri-Larionov/Page Components
+Added item at /sitecore/content/test/home/authors/Dmitri-Larionov/Page Components/Dmitri-Larionov-jss-main-AuthorProfile-1
 Ensuring item path: /sitecore/media library/test/assets/authorImages/dmitri
 + /sitecore/media library/test/assets/authorImages
 + /sitecore/media library/test/assets/authorImages/dmitri
 Created media item at /sitecore/media library/test/assets/authorImages/dmitri
-Added item at /sitecore/content/test/home/authors/RyanKuchler
+Added item at /sitecore/content/test/home/authors/Ryan-Kuchler
 Creating route-level datasource folder (RouteLevelDatasourceStrategy)
-Ensuring item path: /sitecore/content/test/home/authors/RyanKuchler/Page Components
-+ /sitecore/content/test/home/authors/RyanKuchler/Page Components
-Added item at /sitecore/content/test/home/authors/RyanKuchler/Page Components/RyanKuchler-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/content/test/home/authors/Ryan-Kuchler/Page Components
++ /sitecore/content/test/home/authors/Ryan-Kuchler/Page Components
+Added item at /sitecore/content/test/home/authors/Ryan-Kuchler/Page Components/Ryan-Kuchler-jss-main-AuthorProfile-1
 Ensuring item path: /sitecore/media library/test/assets/authorImages/ryan
 + /sitecore/media library/test/assets/authorImages/ryan
 Created media item at /sitecore/media library/test/assets/authorImages/ryan
-Added item at /sitecore/content/test/home/authors/WillRolloff
+Added item at /sitecore/content/test/home/authors/Will-Rolloff
 Creating route-level datasource folder (RouteLevelDatasourceStrategy)
-Ensuring item path: /sitecore/content/test/home/authors/WillRolloff/Page Components
-+ /sitecore/content/test/home/authors/WillRolloff/Page Components
-Added item at /sitecore/content/test/home/authors/WillRolloff/Page Components/WillRolloff-jss-main-AuthorProfile-1
+Ensuring item path: /sitecore/content/test/home/authors/Will-Rolloff/Page Components
++ /sitecore/content/test/home/authors/Will-Rolloff/Page Components
+Added item at /sitecore/content/test/home/authors/Will-Rolloff/Page Components/Will-Rolloff-jss-main-AuthorProfile-1
 Ensuring item path: /sitecore/media library/test/assets/authorImages/will
 + /sitecore/media library/test/assets/authorImages/will
 Created media item at /sitecore/media library/test/assets/authorImages/will

@@ -11,7 +11,7 @@ const LearningCard = (props) => {
   const params = props.params ? props.params : {
     difficultyTag: "advanced",
     learningCategoryTag: "html",
-    author: "DmitriLarionov"
+    author: "Dmitri-Larionov"
   }
   const { difficultyTag, learningCategoryTag, author } = params
 
