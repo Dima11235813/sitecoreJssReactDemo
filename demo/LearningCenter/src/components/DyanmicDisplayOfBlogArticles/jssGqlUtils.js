@@ -6,7 +6,7 @@ export const graphQlQuery = `
   
 `;
 
-const generateJssQuery = (path) => {
+export const generateJssQuery = (path) => {
   return `
   {
     item(path: "${path}") {
@@ -32,7 +32,9 @@ const generateJssQuery = (path) => {
     }
     `
 }
-export default generateJssQuery
+export const generateQuery = () => {
+  return ``
+}
 export const mockedResponse = {
   "data": {
     "item": {

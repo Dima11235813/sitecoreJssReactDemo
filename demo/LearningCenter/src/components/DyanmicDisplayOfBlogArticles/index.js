@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 // //https://mdbootstrap.com/docs/react/advanced/popovers/
 // // import { MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBBtn, MDBContainer } from "mdbreact";
-// import { Text } from "@sitecore-jss/sitecore-jss-react";
+import { Text } from "@sitecore-jss/sitecore-jss-react";
 import { setJssState } from "../../utils/jssUtils";
 import {
   generateJssQuery,
@@ -23,39 +23,39 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
   }
 
   componentDidMount = () => {
-    // const authorsUrl = "/sitecore/content/learningcenter/home/authors"
-    // const { graphQLEndpointPath, sitecoreApiKey } = config;
-    // const { gridContentSource } = this.props.params;
-    // //call graph ql endpoint to get a list of all articles under blog
-    // //check if running in jss start
-    // if (this.jssCodeFirstState) {
-    //   this.setState({
-    //     cardDataToRender: mockedResponse.data
-    //   });
-    // } else if (this.props.context.pageEditing) {
-    //   //generate jss query if in editing mode
-    //   graphQlQuery = generateJssQuery(authorsUrl);
-    // } else {
-    //   graphQlQuery = generateQuery(authorsUrl);
-    // }
-    // if (!this.jssCodeFirstState) {
-    //   axios({
-    //     url: `${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
-    //     method: "post",
-    //     data: { query: graphQlQuery }
-    //   })
-    //     .then(response => {
-    //       let content = response.data;
-    //       this.setState({
-    //         contentToDisplay: content
-    //       });
-    //     })
-    //     .catch(err => {
-    //       console.log(`
-    //       GraphQL Error Getting Content Data:
-    //       ${err}`);
-    //     });
-    // }
+    const authorsUrl = "/sitecore/content/learningcenter/home/authors"
+    const { graphQLEndpointPath, sitecoreApiKey } = config;
+    const { gridContentSource } = this.props.params;
+    //call graph ql endpoint to get a list of all articles under blog
+    //check if running in jss start
+    if (this.jssCodeFirstState) {
+      this.setState({
+        cardDataToRender: mockedResponse.data
+      });
+    } else if (this.props.context.pageEditing) {
+      //generate jss query if in editing mode
+      graphQlQuery = generateJssQuery(authorsUrl);
+    } else {
+      graphQlQuery = generateQuery(authorsUrl);
+    }
+    if (!this.jssCodeFirstState) {
+      axios({
+        url: `${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
+        method: "post",
+        data: { query: graphQlQuery }
+      })
+        .then(response => {
+          let content = response.data;
+          this.setState({
+            contentToDisplay: content
+          });
+        })
+        .catch(err => {
+          console.log(`
+          GraphQL Error Getting Content Data:
+          ${err}`);
+        });
+    }
   };
   render() {
     return <div></div>

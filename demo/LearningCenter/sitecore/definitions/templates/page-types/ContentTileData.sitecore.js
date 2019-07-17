@@ -18,10 +18,8 @@ import {
       fields: [
         { section: contentTileSection, name: "tileTitle", displayName: "Tile Title", type: CommonFieldTypes.SingleLineText },
         { section: contentTileSection, name: "tileDescription", displayName: "Tile Description", type: CommonFieldTypes.SingleLineText },
-        { section: contentTileSection, name: "tileImage", displayName: "Tile Image", type: CommonFieldTypes.Image }
-      ],
-      params: [
-        { name: "author", displayName: 'Blog Author', type: "droplist", source: "/sitecore/content/learningcenter/content/Authors" },
+        { section: contentTileSection, name: "tileImage", displayName: "Tile Image", type: CommonFieldTypes.Image },
+        { section: contentTileSection, name: "authorTag", displayName: 'Blog Author', type: "droplist", source: "/sitecore/content/learningcenter/content/Authors" },
       ],
     });
   }

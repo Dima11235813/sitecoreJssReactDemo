@@ -11,5 +11,6 @@ fields:
   tileImage:
     src: /assets/learningCardImages/cardImage2.jpg
     alt: "Card 2"
-params:
-  author: "Dmitri-Larionov"
+  authorTag:
+    - id: Dmitri-Larionov
+
