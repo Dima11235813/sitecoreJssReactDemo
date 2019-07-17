@@ -76,3 +76,43 @@ const authorsQuery = `
   }
   }
   `
+
+  const allBlogPagesQuery = `
+  
+
+  {
+    item(path: "/sitecore/content/learningcenter/home/blog") {
+      url	
+      children{
+          name 
+        	url
+        
+     ... on Contenttiledata {
+      pageTitle {
+       value
+        displayName
+        
+      }
+      tileDescription {
+        value
+        displayName
+        name
+      }
+      tileImage {
+        value
+        src 
+        alt
+        name
+      }
+      tileTitle {
+        value
+        displayName
+        name
+      }
+      
+    }
+      }
+    
+    }
+  }
+  `
