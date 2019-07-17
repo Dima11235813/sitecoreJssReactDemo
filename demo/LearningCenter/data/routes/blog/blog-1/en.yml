@@ -11,4 +11,4 @@ fields:
   tileImage:
     src: /assets/learningCardImages/cardImage1.jpg
     alt: "Card 1"
-  authorTag: "Ryan-Kuchler"
+  authorTag: Ryan-Kuchler

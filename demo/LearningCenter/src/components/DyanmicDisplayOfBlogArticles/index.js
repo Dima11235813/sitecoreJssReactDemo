@@ -28,7 +28,7 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
   }
 
   componentDidMount = () => {
-    const { graphQLEndpointPath, sitecoreApiKey } = config;
+    const { graphQLEndpointPath, sitecoreApiKey, sitecoreApiHost } = config;
     let graphQlQuery //may be for jss or for data
     //call graph ql endpoint to get a list of all articles under blog
     //check if running in jss start
@@ -45,33 +45,28 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
     }
     if (!this.jssCodeFirstState) {
       axios({
-        url: `${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
+        url: `${sitecoreApiHost}${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
         method: "post",
         data: { query: graphQlQuery }
       })
         .then(response => {
-          debugger
-          let content = response.data;
           this.setState({
-            contentToDisplay: content
+            cardDataToRender: response.data.data
           });
         })
         .catch(err => {
-          debugger
           console.log(`
           GraphQL Error Getting Content Data:
           ${err}`);
         });
-      axios({
-        url: `${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
-        method: "post",
-        data: { query: authorsQuery }
-      })
+        axios({
+          url: `${sitecoreApiHost}${graphQLEndpointPath}?sc_apikey=${sitecoreApiKey}`,
+          method: "post",
+          data: { query: authorsQuery }
+        })
         .then(response => {
-          debugger
-          let content = response.data;
           this.setState({
-            authorContent: content
+            authorContent: response.data.data
           });
         })
         .catch(err => {
@@ -122,11 +117,21 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
               if(this.jssCodeFirstState){
                 imageSourceAltered = tileImage.src.replace('/sitecore/shell/-/media/learningcenter/', '').replace('.ashx', '.jpg');
               }else{
-                imageSourceAltered = tileImage.src.replace('/sitecore/shell/-/media/learningcenter/', '')
+                //since this sitecore instance is on another machine - provide the full path if in connected mode
+                imageSourceAltered = config.sitecoreApiHost + tileImage.src.replace('/sitecore/shell/-/media/learningcenter/', '')
               }
               
               blogCount += 1
-              let manipAuthorName = authorTag.value.replace('-', '')//since the name compes back with a dash
+              let manipAuthorName
+              let displayName
+              //temp handling of non set imported author tags
+              if(authorTag.value.indexOf("System" > -1)){
+                manipAuthorName = "DmitriLarionov"
+                displayName = "Dmitri Larionov"
+              }else{
+                manipAuthorName = authorTag.value.replace('-', '')//since the name compes back with a dash
+                displayName = authorTag.value.replace('-', ' ')
+              }
               if (this.lookUpOfAuthorUrl[manipAuthorName].id === this.state.authorValue || this.state.authorValue === 0) {
                 return (
                   <div className="blog-item" key={`${blogCount}blog`}>
@@ -141,7 +146,7 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
                     </div>
                     <div className="blog-list-tileDescription">{tileDescription.value}</div>
                     <Link to={this.lookUpOfAuthorUrl[manipAuthorName].url}>
-                      <div className="blog-list-author">By {authorTag.value}</div>
+                      <div className="blog-list-author">By {displayName}</div>
                     </Link>
                   </div>
                 )
@@ -152,10 +157,46 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
         }
       </div>
     } else if (this.pageEditing) {
+      let blogCount = 0
+      let styleForLabel = {
+        width: "100%"
+      }
       return (
         <div className="blog-list-container">
-
-        </div>
+          {this.state.cardDataToRender.item.children.map(item => {
+            debugger
+            blogCount += 1
+            const { authorTag, tileDescription, tileImage, tileTitle, url, name } = item
+            const noAttributeIndicator = "N/A"
+            //tileDescription
+            const tileDescriptionJss = tileDescription.jss ? tileDescription.jss : noAttributeIndicator
+            const tileDescriptionJssExists = tileDescription === noAttributeIndicator
+            //author tag
+            const authorTagJss = authorTag.jss ? authorTag.jss : noAttributeIndicator
+            const authorTagJssExists = authorTagJss === noAttributeIndicator
+            return (
+              <div className="blog-item" key={`${blogCount}blog`}>
+                <div style={styleForLabel}>Blog Title</div>
+                  {/* <div className="image-title-container">
+    
+                    <div className="blog-list-tileimage-container">
+                      <img className="blog-image" src={imageSourceAltered} alt={tileImage.alt}></img>
+                    </div>
+                    <Link to={url}>
+                      <div className="blog-list-tileTitle">{tileTitle.value}</div>
+                    </Link>
+                  </div> */}
+                  <div style={styleForLabel}>Blog Description</div>
+                  {tileDescriptionJssExists ? <Text field={tileDescriptionJss}></Text> : noAttributeIndicator}
+                  <div style={styleForLabel}>Author Name</div>
+                  {authorTagJssExists ? <Text field={authorTagJss}></Text> : noAttributeIndicator}
+                  {/* <Link to={this.lookUpOfAuthorUrl[manipAuthorName].url}>
+                    <div className="blog-list-author">By {displayName}</div>
+                  </Link> */}
+                </div>
+            )
+          })}
+          </div>
       )
     }
     return <React.Fragment>
