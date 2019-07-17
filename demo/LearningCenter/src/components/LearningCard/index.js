@@ -30,25 +30,27 @@ class LearningCard extends React.Component {
     let jssCodeFirstState = setJssState(this.props);
     let pageEditing = setEditingMode(this.props)
     if (pageEditing) {
-      //if page editing don't wrap card content in link to prevent users from navigating away from experience editor
       return (
-        <div className="learning-card-container">
+
+      //if page editing don't wrap card content in link to prevent users from navigating away from experience editor
+      <div className="learning-card-container">
           <JssLink field={link}></JssLink>
-          <div className="learning-card-text">
-            <Text field={heading} />
-          </div>
-          <div className="learning-card-difficulty-tag-container">
-            <div className={`badge badge-pill ${difficultyTagClass}`}>
-              {difficultyTag}
+            <div className="learning-card-text">
+              <Text field={heading} />
             </div>
-            {/* TODO Set styles from case switch statement */}
-            <div className={`learning-card-category-tag badge badge-pill badge-dark`}>
-              {learningCategoryTag}
+            <div className="learning-card-difficulty-tag-container">
+              <div className={`badge badge-pill ${difficultyTagClass}`}>
+                {difficultyTag}
+              </div>
+              {/* TODO Set styles from case switch statement */}
+              <div className={`learning-card-category-tag badge badge-pill badge-dark`}>
+                {learningCategoryTag}
+              </div>
             </div>
-          </div>
-          <div className="learning-card-image">
-            <Image media={image} />
-          </div>
+            <div className="learning-card-image">
+              <Image media={image} />
+            </div>
+            {/* If no author is set then don't display this section */}
           {authorNameForDisplay === '' ? null :
             <div className="learning-card-author-container">
               {`By `}
