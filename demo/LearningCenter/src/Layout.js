@@ -69,7 +69,8 @@ let Navigation = ({ t, i18n }) => {
 // the component state updated when i18n state (e.g. current language) changes
 Navigation = withNamespaces()(Navigation);
 
-const Layout = ({ route }) => {
+const Layout = ({ sitecoreData }) => {
+  const {route, context } = sitecoreData
   const containerStyle = {
     minHeight: "calc(100vh - 192px)",
     maxWidth: "1200px"
@@ -114,7 +115,7 @@ const Layout = ({ route }) => {
         style={containerStyle}
       >
         <div className="containter">
-          <Placeholder name="jss-main" rendering={route} />
+          <Placeholder name="jss-main" rendering={route} context={context}/>
         </div>
       </div>
 

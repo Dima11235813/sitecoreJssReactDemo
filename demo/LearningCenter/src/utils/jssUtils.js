@@ -1,4 +1,6 @@
 export const setJssState = props => {
-  const isInCodeFirstState = props.rendering.dataSource === "available-in-connected-mode";
-  return isInCodeFirstState;
+  return props.rendering.dataSource === "available-in-connected-mode";
 };
+export const setEditingMode = props => {
+  return props.context.pageEditing
+}

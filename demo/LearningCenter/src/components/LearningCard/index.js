@@ -1,34 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Text, Link as JssLink, Image } from '@sitecore-jss/sitecore-jss-react';
-import { setJssState } from '../../utils/jssUtils'
+import { setJssState, setEditingMode } from '../../utils/jssUtils'
 
 import './learningCardStyles.css'
 
-const LearningCard = (props) => {
-
-  const { heading, link, image } = props.fields
-  const params = props.params ? props.params : {
-    difficultyTag: "advanced",
-    learningCategoryTag: "html",
-    author: "Dmitri-Larionov"
+class LearningCard extends React.Component {
+  constructor(props) {
+    super(props)
   }
-  const { difficultyTag, learningCategoryTag, author } = params
+  render() {
+    const { heading, link, image } = this.props.fields
+    const params = this.props.params ? this.props.params : {
+      difficultyTag: "advanced",
+      learningCategoryTag: "html",
+      author: "Dmitri-Larionov"
+    }
+    const { difficultyTag, learningCategoryTag, author } = params
 
-  let authorUrl = '/'
-  let authorNameForDisplay = ''
+    let authorUrl = '/'
+    let authorNameForDisplay = ''
 
-  if (author) {
-    authorUrl = author.split('-').join('')
-    authorNameForDisplay = author.split('-').join(' ')
-  }
-  let difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
-  let categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
-  let jssCodeFirstState = setJssState(props);
-  return jssCodeFirstState ?
-    (
-      <div className="learning-card-container">
-        <JssLink field={link}>
+    if (author) {
+      authorUrl = author.split('-').join('')
+      authorNameForDisplay = author.split('-').join(' ')
+    }
+    let difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
+    let categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
+    let jssCodeFirstState = setJssState(this.props);
+    let pageEditing = setEditingMode(this.props)
+    if (pageEditing) {
+      //if page editing don't wrap card content in link to prevent users from navigating away from experience editor
+      return (
+        <div className="learning-card-container">
+          <JssLink field={link}></JssLink>
           <div className="learning-card-text">
             <Text field={heading} />
           </div>
@@ -44,38 +49,53 @@ const LearningCard = (props) => {
           <div className="learning-card-image">
             <Image media={image} />
           </div>
-          {/* If no author is set then don't display this section */}
-        </JssLink>
-        {authorNameForDisplay === '' ? null :
-          <div className="learning-card-author-container">
-            {`By `}
-            <Link to={`/authors/${authorUrl}`}>
-              <span className="learning-card-author">
-                {authorNameForDisplay}
-              </span>
-            </Link>
-          </div>
-        }
-      </div>
-    )
-    :
-    (
-      <div>
-        <div></div>
-        <JssLink field={link}></JssLink>
-        <Text field={heading} />
-          <div>
-            <div>
-              {difficultyTag}
+          {authorNameForDisplay === '' ? null :
+            <div className="learning-card-author-container">
+              {`By `}
+              <Link to={`/authors/${authorUrl}`}>
+                <span className="learning-card-author">
+                  {authorNameForDisplay}
+                </span>
+              </Link>
             </div>
-            <div>
-              {learningCategoryTag}
+          }
+        </div>
+      )
+    } else {
+      return (
+        <div className="learning-card-container">
+          <JssLink field={link}>
+            <div className="learning-card-text">
+              <Text field={heading} />
             </div>
-          </div>
-          <Image media={image} />
-          <div>{authorNameForDisplay}</div>
-      </div>
-    )
+            <div className="learning-card-difficulty-tag-container">
+              <div className={`badge badge-pill ${difficultyTagClass}`}>
+                {difficultyTag}
+              </div>
+              {/* TODO Set styles from case switch statement */}
+              <div className={`learning-card-category-tag badge badge-pill badge-dark`}>
+                {learningCategoryTag}
+              </div>
+            </div>
+            <div className="learning-card-image">
+              <Image media={image} />
+            </div>
+            {/* If no author is set then don't display this section */}
+          </JssLink>
+          {authorNameForDisplay === '' ? null :
+            <div className="learning-card-author-container">
+              {`By `}
+              <Link to={`/authors/${authorUrl}`}>
+                <span className="learning-card-author">
+                  {authorNameForDisplay}
+                </span>
+              </Link>
+            </div>
+          }
+        </div>
+      )
+    }
+  }
 
 }
 
