@@ -15,6 +15,6 @@ export default function(manifest) {
   manifest.addTemplate({
     name: "AuthorItem",
     displayName: "Author",
-    icon: "/~/icon/apps/32x32/Paint.png",
+    icon: SitecoreIcon.Tag,
   });
 }
