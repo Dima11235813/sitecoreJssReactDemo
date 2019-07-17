@@ -17,9 +17,9 @@ export default function(manifest) {
       { name: 'image', type: CommonFieldTypes.Image },
     ],
     params: [
-      { name: "difficultyTag", displayName: 'Learning Card Difficulty Tag', type: 'droplist', source: '/sitecore/content/learningcenter/Content/DifficultyTags' },
-      { name: "learningCategoryTag", displayName: 'Learning Category Tag', type: 'droplist', source: '/sitecore/content/learningcenter/Content/LearningCategories' },
-      { name: "author", displayName: 'Author Tag', type: 'droplist', source: '/sitecore/content/learningcenter/Content/Author' }
+      { name: "difficultyTag", displayName: 'Learning Card Difficulty Tag', type: 'droplist', source: '/sitecore/content/learningcenter/content/DifficultyTags' },
+      { name: "learningCategoryTag", displayName: 'Learning Category Tag', type: 'droplist', source: '/sitecore/content/learningcenter/content/LearningCategories' },
+      { name: "author", displayName: 'Author Tag', type: 'droplist', source: '/sitecore/content/learningcenter/content/Authors' }
     ]
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,
