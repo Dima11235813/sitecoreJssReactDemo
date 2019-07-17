@@ -16,14 +16,13 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
   constructor(props) {
     super(props);
   // set up var to container whether we are in jss code first mode
-  this.jssCodeFirstState = setJssState(this); //pass context so util has access to passed props
+  this.jssCodeFirstState = setJssState(props); //pass context so util has access to passed props
     this.state = {
       content: null
     };
   }
 
   componentDidMount = () => {
-    debugger
     // const authorsUrl = "/sitecore/content/learningcenter/home/authors"
     // const { graphQLEndpointPath, sitecoreApiKey } = config;
     // const { gridContentSource } = this.props.params;

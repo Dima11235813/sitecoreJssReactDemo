@@ -1,61 +1,82 @@
 import React from 'react';
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Text, Link as JssLink, Image } from '@sitecore-jss/sitecore-jss-react';
+import { setJssState } from '../../utils/jssUtils'
 
 import './learningCardStyles.css'
 
 const LearningCard = (props) => {
 
-const {heading, link, image} = props.fields
-const params = props.params ? props.params : {
-  difficultyTag: "advanced",
-  learningCategoryTag: "html",
-  author: "Dmitri-Larionov"
-}
-const {difficultyTag, learningCategoryTag, author } = params
+  const { heading, link, image } = props.fields
+  const params = props.params ? props.params : {
+    difficultyTag: "advanced",
+    learningCategoryTag: "html",
+    author: "Dmitri-Larionov"
+  }
+  const { difficultyTag, learningCategoryTag, author } = params
 
-let authorUrl = '/'
-let authorNameForDisplay = ''
+  let authorUrl = '/'
+  let authorNameForDisplay = ''
 
-if(author){
-  authorUrl = author.split('-').join('')
-  authorNameForDisplay = author.split('-').join(' ')
-}
-let difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
-let categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
-
-return(
-  <div className="learning-card-container">
-    <JssLink field={link}>
-      <div className="learning-card-text">
+  if (author) {
+    authorUrl = author.split('-').join('')
+    authorNameForDisplay = author.split('-').join(' ')
+  }
+  let difficultyTagClass = returnClassForDifficultyBadge(difficultyTag)
+  let categoryTagClass = returnClassForCategoryBadge(learningCategoryTag)
+  let jssCodeFirstState = setJssState(props);
+  return jssCodeFirstState ?
+    (
+      <div className="learning-card-container">
+        <JssLink field={link}>
+          <div className="learning-card-text">
+            <Text field={heading} />
+          </div>
+          <div className="learning-card-difficulty-tag-container">
+            <div className={`badge badge-pill ${difficultyTagClass}`}>
+              {difficultyTag}
+            </div>
+            {/* TODO Set styles from case switch statement */}
+            <div className={`learning-card-category-tag badge badge-pill badge-dark`}>
+              {learningCategoryTag}
+            </div>
+          </div>
+          <div className="learning-card-image">
+            <Image media={image} />
+          </div>
+          {/* If no author is set then don't display this section */}
+        </JssLink>
+        {authorNameForDisplay === '' ? null :
+          <div className="learning-card-author-container">
+            {`By `}
+            <Link to={`/authors/${authorUrl}`}>
+              <span className="learning-card-author">
+                {authorNameForDisplay}
+              </span>
+            </Link>
+          </div>
+        }
+      </div>
+    )
+    :
+    (
+      <div>
+        <div></div>
+        <JssLink field={link}></JssLink>
         <Text field={heading} />
+          <div>
+            <div>
+              {difficultyTag}
+            </div>
+            <div>
+              {learningCategoryTag}
+            </div>
+          </div>
+          <Image media={image} />
+          <div>{authorNameForDisplay}</div>
       </div>
-      <div className="learning-card-difficulty-tag-container">
-        <div className={`badge badge-pill ${difficultyTagClass}`}>
-          {difficultyTag}
-        </div>
-        {/* TODO Set styles from case switch statement */}
-        <div className={`learning-card-category-tag badge badge-pill badge-dark`}>
-          {learningCategoryTag}
-        </div>
-      </div>
-      <div className="learning-card-image">
-        <Image media={image} />
-      </div>
-      {/* If no author is set then don't display this section */}
-      </JssLink>
-      {authorNameForDisplay === '' ? null :
-      <div className="learning-card-author-container">
-        {`By `}
-      <Link to={`/authors/${authorUrl}`}>
-        <span className="learning-card-author">
-          {authorNameForDisplay}
-        </span>
-      </Link>
-      </div>
-      }
-  </div>
-)
+    )
+
 }
 
 export default LearningCard;
@@ -65,7 +86,7 @@ export default LearningCard;
 
 
 const returnClassForCategoryBadge = (categoryTag) => {
-  switch(categoryTag){
+  switch (categoryTag) {
     case "react":
       return "badge-success"
     case "angular":
@@ -89,7 +110,7 @@ const returnClassForCategoryBadge = (categoryTag) => {
   }
 }
 const returnClassForDifficultyBadge = (difficultyTag) => {
-  switch(difficultyTag){
+  switch (difficultyTag) {
     case "beginner":
       return "badge-success"
     case "intermediate":

@@ -11,3 +11,5 @@ fields:
   tileImage:
     src: /assets/learningCardImages/cardImage3.jpg
     alt: "Card 3"
+params:
+  author: "Will-Rolloff"
