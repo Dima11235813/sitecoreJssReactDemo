@@ -157,10 +157,46 @@ class DyanmicDisplayOfBlogArticles extends React.Component {
         }
       </div>
     } else if (this.pageEditing) {
+      let blogCount = 0
+      let styleForLabel = {
+        width: "100%"
+      }
       return (
         <div className="blog-list-container">
-
-        </div>
+          {this.state.cardDataToRender.item.children.map(item => {
+            debugger
+            blogCount += 1
+            const { authorTag, tileDescription, tileImage, tileTitle, url, name } = item
+            const noAttributeIndicator = "N/A"
+            //tileDescription
+            const tileDescriptionJss = tileDescription.jss ? tileDescription.jss : noAttributeIndicator
+            const tileDescriptionJssExists = tileDescription === noAttributeIndicator
+            //author tag
+            const authorTagJss = authorTag.jss ? authorTag.jss : noAttributeIndicator
+            const authorTagJssExists = authorTagJss === noAttributeIndicator
+            return (
+              <div className="blog-item" key={`${blogCount}blog`}>
+                <div style={styleForLabel}>Blog Title</div>
+                  {/* <div className="image-title-container">
+    
+                    <div className="blog-list-tileimage-container">
+                      <img className="blog-image" src={imageSourceAltered} alt={tileImage.alt}></img>
+                    </div>
+                    <Link to={url}>
+                      <div className="blog-list-tileTitle">{tileTitle.value}</div>
+                    </Link>
+                  </div> */}
+                  <div style={styleForLabel}>Blog Description</div>
+                  {tileDescriptionJssExists ? <Text field={tileDescriptionJss}></Text> : noAttributeIndicator}
+                  <div style={styleForLabel}>Author Name</div>
+                  {authorTagJssExists ? <Text field={authorTagJss}></Text> : noAttributeIndicator}
+                  {/* <Link to={this.lookUpOfAuthorUrl[manipAuthorName].url}>
+                    <div className="blog-list-author">By {displayName}</div>
+                  </Link> */}
+                </div>
+            )
+          })}
+          </div>
       )
     }
     return <React.Fragment>
