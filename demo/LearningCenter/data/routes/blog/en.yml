@@ -1,6 +1,6 @@
-id: our-insights
-name: our-insights
-displayName: Our Insights
+id: blog
+name: blog
+displayName: blog
 template: page-route
 fields:
   pageTitle: Blog

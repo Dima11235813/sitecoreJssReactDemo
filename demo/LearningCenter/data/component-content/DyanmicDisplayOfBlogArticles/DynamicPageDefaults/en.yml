@@ -5,5 +5,5 @@ componentName: DyanmicDisplayOfBlogArticles
 fields: 
   defaultCardImage:
     src: /assets/learningCardImages/cardImage1.jpg
-    alt: "play icon"
+    alt: "default image"
   
