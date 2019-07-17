@@ -7,7 +7,11 @@ import './learningCardStyles.css'
 const LearningCard = (props) => {
 
 const {heading, link, image} = props.fields
-const params = props.params ? props.params : null
+const params = props.params ? props.params : {
+  difficultyTag: "advanced",
+  learningCategoryTag: "html",
+  author: "Dmitri-Larionov"
+}
 const {difficultyTag, learningCategoryTag, author } = params
 
 let authorUrl = '/'
