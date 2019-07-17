@@ -11,5 +11,4 @@ fields:
   tileImage:
     src: /assets/learningCardImages/cardImage3.jpg
     alt: "Card 3"
-  authorTag:
-    - id: Will-Rolloff
+  authorTag: Will-Rolloff
