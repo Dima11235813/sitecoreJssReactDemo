@@ -1,0 +1,13 @@
+id: blog2
+name: blog2
+displayName: Blog 2
+template: blog-route
+fields:
+  pageTitle: Blog Article One
+  metaDescription: meta data goes here
+  metaKeywords: meta, key, word
+  tileTitle: Blog Article 2
+  tileDescription: Blog Article 2 Description
+  tileImage:
+    src: /assets/learningCardImages/cardImage2.jpg
+    alt: "Card 2"

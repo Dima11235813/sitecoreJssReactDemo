@@ -1,3 +1,7 @@
+id: our-insights
+name: our-insights
+displayName: Our Insights
+template: page-route
 fields:
   pageTitle: Blog
 placeholders:

@@ -6,9 +6,8 @@ fields:
   pageTitle: Blog Article One
   metaDescription: meta data goes here
   metaKeywords: meta, key, word
-  # contentTags:
-  #   - id: blog-article-type-tbd
-  tileDescription: Blog article 1
+  tileTitle: Blog Article 1
+  tileDescription: Blog Article 1 Description
   tileImage:
     src: /assets/learningCardImages/cardImage1.jpg
-    alt: "Video 1"
+    alt: "Card 1"
